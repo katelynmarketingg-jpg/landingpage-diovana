@@ -7,7 +7,7 @@
 <meta name="description" content="Diovana Carvalho, advogada previdenciária, trabalhista e cível em Santo Antônio da Patrulha/RS. Salário-maternidade, BPC/LOAS, auxílio-doença, rescisão e benefício negado. Atendimento presencial e online.">
 <link rel="canonical" href="https://[DOMINIO]/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#260101">
+<meta name="theme-color" content="#1E1611">
 
 <!-- Open Graph (compartilhamento no WhatsApp/Facebook) -->
 <meta property="og:type" content="website">
@@ -57,19 +57,18 @@
 @font-face{font-family:"Cloud Lucent";src:local("Cloud Lucent"),local("CloudLucent-Regular"),url("fonts/CloudLucent-Regular.woff2") format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cloud Lucent";src:local("Cloud Lucent Italic"),local("CloudLucent-Italic"),url("fonts/CloudLucent-Italic.woff2") format("woff2");font-weight:400 600;font-style:italic;font-display:swap}
 :root{
-  --black:#260101;
-  --ink:#260101;
-  --cream:#F3E8D8;
-  --beige:#D9B991;
-  --paper:#EADBC4;
-  --wine:#402814;
-  --wine-2:#400106;
-  --accent:#400106;      /* bordô da marca */
-  --accent-light:#D9B991; /* bege: destaques sobre fundo escuro */
-  --muted:#D9B991;      /* bege sobre fundo escuro */
-  --muted-dark:#4A2F18; /* marrom sobre bege */
-  --line-dark:rgba(243,232,216,.18);
-  --line-light:rgba(64,40,20,.22);
+  --black:#1E1611;
+  --ink:#2A1F18;
+  --cream:#F0E1CE;
+  --paper:#F8F1E7;
+  --wine:#583E2E;
+  --wine-2:#6E1C26;
+  --accent:#6E1C26;      /* bordô: detalhes sobre fundo claro (contraste 10:1 com o creme) */
+  --accent-light:#D08A92; /* bordô claro: detalhes sobre fundo escuro */
+  --muted:#B8A491;      /* sobre marrom-escuro: contraste 7:1 (AA) */
+  --muted-dark:#6A5543; /* sobre creme: contraste 5,5:1 (AA) */
+  --line-dark:rgba(240,225,206,.18);
+  --line-light:rgba(88,62,46,.22);
   --serif:"Cloud Lucent", "Playfair Display", Georgia, serif;
   --label:"Montserrat", "Inter", system-ui, sans-serif;
   --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -80,12 +79,12 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--black);color:var(--cream);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--cream);color:var(--cream);font-family:var(--sans);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%}
 a{color:inherit}
 p{margin:0 0 1em}
 ul{margin:0;padding:0;list-style:none}
-:focus-visible{outline:2px solid #D9B991;outline-offset:3px}
+:focus-visible{outline:2px solid #B8A491;outline-offset:3px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .skip{position:absolute;left:1rem;top:-3rem;background:var(--cream);color:var(--black);padding:.6rem 1rem;z-index:100}
 .skip:focus{top:1rem}
@@ -101,21 +100,21 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ---------- Botões ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:var(--accent);color:var(--cream);font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1.15rem 1.9rem;border-radius:999px;border:1px solid var(--accent);transition:background .3s, border-color .3s, transform .3s;min-height:48px;text-align:center}
-.btn:hover{background:#6B0A12;border-color:#6B0A12;color:#fff}
+.btn:hover{background:#8A2633;border-color:#8A2633;color:#fff}
 .btn--light{background:var(--cream);color:var(--accent);border-color:var(--cream)}
 .btn--light:hover{background:#fff;border-color:#fff}
 .link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--label);font-weight:600;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:.6rem 0;border-bottom:1px solid currentColor;transition:gap .3s}
 .link:hover{gap:.9rem}
 
 /* ---------- Fotos (placeholder editorial) ---------- */
-.photo{position:relative;margin:0;overflow:hidden;background:linear-gradient(160deg,#402814 0%,#1E1611 70%);border-radius:var(--radius);min-height:320px}
-.photo::after{content:attr(data-label);position:absolute;inset:auto 1rem 1rem 1rem;font-family:var(--label);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,232,216,.55);pointer-events:none}
+.photo{position:relative;margin:0;overflow:hidden;background:linear-gradient(160deg,#4A3627 0%,#1E1611 70%);border-radius:var(--radius);min-height:320px}
+.photo::after{content:attr(data-label);position:absolute;inset:auto 1rem 1rem 1rem;font-family:var(--label);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,225,206,.55);pointer-events:none}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1.4s cubic-bezier(.2,.7,.2,1);z-index:1}
 .photo:hover img{transform:scale(1.045)}
 
 /* ---------- Header ---------- */
 .header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem var(--pad);transition:background .4s, padding .4s, border-color .4s;border-bottom:1px solid transparent}
-.header.scrolled{background:rgba(38,1,1,.94);backdrop-filter:blur(8px);padding-top:.7rem;padding-bottom:.7rem;border-color:var(--line-dark)}
+.header.scrolled{background:rgba(88,62,46,.97);backdrop-filter:blur(8px);padding-top:.7rem;padding-bottom:.7rem;border-color:var(--line-dark)}
 .logo{text-decoration:none;display:flex;align-items:center;gap:.65rem;line-height:1}
 .logo-mark{height:38px;width:auto}
 .logo-name{height:10px;width:auto}
@@ -123,7 +122,7 @@ ul{margin:0;padding:0;list-style:none}
 @media (min-width:600px){.logo-mark{height:44px}.logo-name{height:13px}}
 .logo b{font-family:var(--serif);font-weight:400;font-size:1.05rem;letter-spacing:.1em;white-space:nowrap}
 @media (min-width:600px){.logo b{font-size:1.3rem;letter-spacing:.14em}}
-.logo span{font-family:var(--script);font-size:1.15rem;margin-top:-.1rem;margin-left:auto;color:#D9B991}
+.logo span{font-family:var(--script);font-size:1.15rem;margin-top:-.1rem;margin-left:auto;color:#B8A491}
 .nav{display:none}
 .nav a{font-family:var(--label);font-weight:500;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;opacity:.85;transition:opacity .3s}
 .nav a:hover{opacity:1}
@@ -149,19 +148,19 @@ ul{margin:0;padding:0;list-style:none}
 .hero .photo::after{inset:auto var(--pad) 1.25rem auto;text-align:right}
 .hero .photo img{object-position:70% 15%}
 @media (min-width:960px){.hero .photo img{object-position:50% 2%}.hero .hero-inner{max-width:560px}.hero .display{font-size:clamp(3.2rem,5vw,4.8rem);max-width:13ch}}
-.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:140px;z-index:2;background:linear-gradient(180deg,rgba(38,1,1,.55),rgba(38,1,1,0))}
-.hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(64,40,20,.94) 0%,rgba(64,40,20,.82) 45%,rgba(64,40,20,.4) 62%,rgba(64,40,20,0) 78%)}
-@media (min-width:960px){.hero::after{background:linear-gradient(90deg,rgba(64,40,20,.9) 0%,rgba(64,40,20,.72) 30%,rgba(64,40,20,.25) 50%,rgba(64,40,20,0) 62%)}}
-.closing::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(64,40,20,.94) 0%,rgba(64,40,20,.78) 50%,rgba(64,40,20,.35) 100%)}
-@media (min-width:960px){.closing::after{background:linear-gradient(90deg,rgba(64,40,20,.92) 0%,rgba(64,40,20,.75) 32%,rgba(64,40,20,.2) 55%,rgba(64,40,20,0) 66%)}}
-.closing .wrap{text-shadow:0 1px 18px rgba(38,1,1,.45)}
-.hero-inner{position:relative;z-index:3;max-width:1100px;text-shadow:0 1px 18px rgba(38,1,1,.45)}
-.hero h1.eyebrow{color:#F3E8D8}
-.hero .lead{color:#F3E8D8;margin-bottom:2.2rem}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:140px;z-index:2;background:linear-gradient(180deg,rgba(30,22,17,.55),rgba(30,22,17,0))}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(58,40,29,.94) 0%,rgba(58,40,29,.82) 45%,rgba(58,40,29,.4) 62%,rgba(58,40,29,0) 78%)}
+@media (min-width:960px){.hero::after{background:linear-gradient(90deg,rgba(58,40,29,.9) 0%,rgba(58,40,29,.72) 30%,rgba(58,40,29,.25) 50%,rgba(58,40,29,0) 62%)}}
+.closing::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(58,40,29,.94) 0%,rgba(58,40,29,.78) 50%,rgba(58,40,29,.35) 100%)}
+@media (min-width:960px){.closing::after{background:linear-gradient(90deg,rgba(58,40,29,.92) 0%,rgba(58,40,29,.75) 32%,rgba(58,40,29,.2) 55%,rgba(58,40,29,0) 66%)}}
+.closing .wrap{text-shadow:0 1px 18px rgba(46,30,20,.45)}
+.hero-inner{position:relative;z-index:3;max-width:1100px;text-shadow:0 1px 18px rgba(46,30,20,.45)}
+.hero h1.eyebrow{color:#E8D9C5}
+.hero .lead{color:#F0E1CE;margin-bottom:2.2rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center}
 
 /* ---------- Marquee ---------- */
-.marquee{background:var(--accent);overflow:hidden;border-top:1px solid rgba(243,232,216,.12);border-bottom:1px solid rgba(243,232,216,.12)}
+.marquee{background:var(--accent);overflow:hidden;border-top:1px solid rgba(240,225,206,.12);border-bottom:1px solid rgba(240,225,206,.12)}
 .marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
 .marquee span{font-family:var(--label);font-weight:500;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;padding:1.15rem 0}
 @keyframes marquee{to{transform:translateX(-50%)}}
@@ -170,12 +169,12 @@ ul{margin:0;padding:0;list-style:none}
 section{position:relative}
 .wrap{max-width:1280px;margin:0 auto;padding:var(--section) var(--pad)}
 .bg-black{background:var(--black);color:var(--cream)}
-.bg-cream{background:var(--beige);color:var(--black)}
+.bg-cream{background:var(--cream);color:var(--black)}
 .bg-paper{background:var(--paper);color:var(--black)}
 .bg-wine{background:var(--wine);color:var(--cream)}
 .bg-cream .eyebrow,.bg-paper .eyebrow{color:var(--accent)}
 .bg-black .eyebrow{color:var(--muted)}
-.bg-wine .eyebrow{color:#D9B991}
+.bg-wine .eyebrow{color:#D9C6B0}
 .bg-cream .muted,.bg-paper .muted{color:var(--muted-dark)}
 .bg-black .muted{color:var(--muted)}
 .center{text-align:center;margin-left:auto;margin-right:auto}
@@ -186,7 +185,7 @@ section{position:relative}
 .pillar{padding:2rem 0;border-bottom:1px solid var(--line-dark)}
 .pillar .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--accent-light)}
 .pillar h3{font-family:var(--label);font-weight:600;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:.6rem 0 .7rem}
-.pillar p{color:#E6D2B5;margin:0;max-width:30ch}
+.pillar p{color:#D3C2AE;margin:0;max-width:30ch}
 @media (min-width:860px){
   .pillars{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line-dark)}
   .pillar{padding:2.5rem 2.2rem;border-bottom:0;border-left:1px solid var(--line-dark)}
@@ -208,7 +207,7 @@ section{position:relative}
 }
 
 /* ---------- Serviços ---------- */
-.services{background:var(--black);padding:clamp(1rem,3vw,2rem) clamp(.75rem,2.5vw,2rem)}
+.services{background:var(--cream);padding:clamp(1rem,3vw,2rem) clamp(.75rem,2.5vw,2rem)}
 .service{display:grid;border-radius:14px;overflow:hidden;margin-bottom:clamp(.75rem,2.5vw,2rem);scroll-margin-top:5rem}
 .service:last-child{margin-bottom:0}
 .service .body{padding:clamp(2.5rem,7vw,5.5rem) clamp(1.5rem,6vw,5rem)}
@@ -238,13 +237,28 @@ section{position:relative}
 .service.bg-paper .note,.service.bg-paper .small{color:var(--muted-dark);opacity:1}
 
 .bg-bordo{background:var(--accent);color:var(--cream)}
-.bg-bordo .eyebrow,.bg-bordo .small{color:#D9B991}
-.service.bg-bordo .checks li::before{color:#D9B991}
-.service.bg-bordo .checks,.service.bg-bordo .checks li{border-color:rgba(243,232,216,.22)}
+.bg-bordo .eyebrow,.bg-bordo .small{color:#EBC3C8}
+.service.bg-bordo .checks li::before{color:#EBC3C8}
+.service.bg-bordo .checks,.service.bg-bordo .checks li{border-color:rgba(240,225,206,.22)}
 /* palavras em itálico dos títulos em bordô (fundos claros) e bordô claro (fundos escuros) */
 .bg-cream .display em,.bg-paper .display em,.service.bg-paper .display em{color:var(--accent)}
 .bg-black .display em,.service.bg-black .display em,.manifesto .display em{color:var(--accent-light)}
 .service.bg-black .tag{color:var(--accent-light)}
+
+.bg-white{background:#fff;color:var(--black)}
+.bg-white .eyebrow{color:var(--accent)}
+.bg-white .muted{color:var(--muted-dark)}
+.bg-white .display em,.bg-cream .display em,.bg-paper .display em{color:var(--accent)}
+.service.bg-white,.service.bg-paper{border:1px solid var(--line-light)}
+.service.bg-white .tag,.service.bg-paper .tag{color:var(--accent)}
+.service.bg-white .checks,.service.bg-white .checks li{border-color:var(--line-light)}
+.service.bg-white .checks li::before,.service.bg-paper .checks li::before{color:var(--accent)}
+.service.bg-white .note,.service.bg-white .small,.service.bg-paper .note,.service.bg-paper .small{color:var(--muted-dark);opacity:1}
+.service.bg-wine .checks li::before,.bg-wine .display em{color:#E9C9B4}
+.manifesto .pillar p{color:var(--muted-dark)}
+.manifesto .pillars,.manifesto .pillar{border-color:var(--line-light)}
+.manifesto.bg-white .display em{color:var(--accent)}
+.footer .muted,.footer .legal{color:#E3D3BF}
 
 /* ---------- Outras áreas (abas verticais) ---------- */
 .others-head{display:grid;gap:1rem;margin-bottom:3rem}
@@ -269,7 +283,7 @@ section{position:relative}
   .tab{display:flex;flex:0 0 86px;border-bottom:0;border-right:1px solid var(--line-light);transition:flex .6s cubic-bezier(.6,0,.2,1);overflow:hidden}
   .tab.open{flex:1 1 auto}
   .tab-btn{flex:0 0 86px;width:86px;flex-direction:column;justify-content:flex-end;align-items:center;padding:1.6rem 0;height:100%}
-  .tab-btn:hover{background:rgba(64,40,20,.06)}
+  .tab-btn:hover{background:rgba(88,62,46,.06)}
   .tab-num{flex:none}
   .tab-title{writing-mode:vertical-rl;transform:rotate(180deg);flex:none;white-space:nowrap}
   .tab-icon{display:none}
@@ -293,9 +307,9 @@ section{position:relative}
 .monogram{position:absolute;right:-6%;bottom:-8%;width:min(78%,560px);height:auto;opacity:.08;pointer-events:none;user-select:none}
 .about .body > *{position:relative}
 .quote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.8rem,4.6vw,2.9rem);line-height:1.15;margin:0 0 2.2rem;max-width:20ch}
-.about p{max-width:42ch;color:#F3E8D8}
-.signature{font-family:var(--script);font-size:3rem;line-height:1;margin:2rem 0 .4rem;color:#F3E8D8}
-.oab{font-family:var(--label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#D9B991}
+.about p{max-width:42ch;color:#F3E9DC}
+.signature{font-family:var(--script);font-size:3rem;line-height:1;margin:2rem 0 .4rem;color:#F0E1CE}
+.oab{font-family:var(--label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#D9C6B0}
 @media (min-width:960px){.about{grid-template-columns:1fr 1fr}.about .photo{min-height:100%}}
 
 /* ---------- FAQ ---------- */
@@ -317,10 +331,10 @@ section{position:relative}
 
 .closing .wrap{position:relative;z-index:3;padding-top:clamp(5rem,13vw,9rem);padding-bottom:clamp(5rem,13vw,9rem)}
 @media (min-width:960px){.closing{text-align:left}.closing .closing-panel{margin:0;max-width:560px}.closing .closing-panel .lead{margin-left:0}.closing .display{font-size:clamp(3rem,4.6vw,4.4rem)}}
-.closing .lead{margin:0 auto 2.5rem;color:#F3E8D8}
+.closing .lead{margin:0 auto 2.5rem;color:#EADBC7}
 
 /* ---------- Rodapé ---------- */
-.footer{background:var(--black);border-top:1px solid var(--line-dark);padding:4rem var(--pad) 7rem;font-size:.95rem}
+.footer{background:var(--wine);border-top:0;padding:4rem var(--pad) 7rem;font-size:.95rem}
 .footer-grid{max-width:1280px;margin:0 auto;display:grid;gap:2.5rem}
 @media (min-width:860px){.footer-grid{grid-template-columns:1.3fr 1fr 1fr}}
 .footer h2{font-family:var(--serif);font-weight:500;font-size:1.7rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 .3rem}
@@ -331,7 +345,7 @@ section{position:relative}
 @media (min-width:960px){.footer{padding-bottom:4rem}}
 
 /* ---------- Botão flutuante (mobile) ---------- */
-.float-wa{position:fixed;right:1rem;bottom:1rem;z-index:40;display:flex;align-items:center;gap:.55rem;background:var(--accent);color:var(--cream);text-decoration:none;font-family:var(--label);font-weight:600;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem 1.15rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid rgba(243,232,216,.18);opacity:0;transform:translateY(20px);transition:opacity .4s, transform .4s;pointer-events:none}
+.float-wa{position:fixed;right:1rem;bottom:1rem;z-index:40;display:flex;align-items:center;gap:.55rem;background:var(--accent);color:var(--cream);text-decoration:none;font-family:var(--label);font-weight:600;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem 1.15rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid rgba(240,225,206,.18);opacity:0;transform:translateY(20px);transition:opacity .4s, transform .4s;pointer-events:none}
 .float-wa.show{opacity:1;transform:none;pointer-events:auto}
 .float-wa svg{width:18px;height:18px}
 @media (min-width:960px){.float-wa{display:none}}
@@ -437,7 +451,7 @@ section{position:relative}
 <!-- ============ 6. SITUAÇÕES (PROBLEMA → SOLUÇÃO) ============ -->
 <div class="services" id="areas">
 
-  <article class="service bg-wine" id="maternidade" aria-labelledby="s1">
+  <article class="service bg-white" id="maternidade" aria-labelledby="s1">
     <div class="body">
       <span class="tag">Salário-maternidade</span>
       <h2 class="display h-md reveal" id="s1">Grávida? <em>Uma única</em> contribuição pode bastar</h2>
@@ -451,14 +465,14 @@ section{position:relative}
         <li>quem trabalha no campo, mesmo sem carteira assinada.</li>
       </ul>
       <p class="note">Teve o pedido negado por falta de contribuições? Ele pode ser analisado de novo.</p>
-      <a class="btn btn--light" data-wa="Olá, Diovana! Estou grávida (ou tive bebê) e gostaria de verificar meu direito ao salário-maternidade." href="#contato" target="_blank" rel="noopener">Quero verificar meu salário-maternidade</a>
+      <a class="btn" data-wa="Olá, Diovana! Estou grávida (ou tive bebê) e gostaria de verificar meu direito ao salário-maternidade." href="#contato" target="_blank" rel="noopener">Quero verificar meu salário-maternidade</a>
     </div>
     <figure class="photo">
       <img src="img/maternidade.jpg" alt="Diovana Carvalho sorrindo, sentada no escritório com livros de Direito Previdenciário" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
-  <article class="service bg-black reverse" id="bpc" aria-labelledby="s2">
+  <article class="service bg-paper reverse" id="bpc" aria-labelledby="s2">
     <div class="body">
       <span class="tag">BPC/LOAS</span>
       <h2 class="display h-md reveal" id="s2">Um salário mínimo por mês, <em>mesmo sem</em> nunca ter contribuído</h2>
@@ -479,7 +493,7 @@ section{position:relative}
     </figure>
   </article>
 
-  <article class="service bg-paper" id="rescisao" aria-labelledby="s3">
+  <article class="service bg-wine" id="rescisao" aria-labelledby="s3">
     <div class="body">
       <span class="tag">Trabalhista</span>
       <h2 class="display h-md reveal" id="s3">Saiu do emprego? <em>Confira</em> se as contas fecham</h2>
@@ -493,14 +507,14 @@ section{position:relative}
         <li>horas extras e adicionais que nunca foram pagos.</li>
       </ul>
       <p class="note">Você tem até 2 anos depois de sair da empresa para buscar esses direitos na Justiça.</p>
-      <a class="btn" data-wa="Olá, Diovana! Saí do emprego e gostaria de conferir se minha rescisão está correta." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
+      <a class="btn btn--light" data-wa="Olá, Diovana! Saí do emprego e gostaria de conferir se minha rescisão está correta." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
     </div>
     <figure class="photo">
       <img src="img/rescisao.jpg" alt="Diovana Carvalho com a CLT aberta nas mãos" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
-  <article class="service bg-bordo reverse" id="rescisao-indireta" aria-labelledby="s4">
+  <article class="service bg-white reverse" id="rescisao-indireta" aria-labelledby="s4">
     <div class="body">
       <span class="tag">Rescisão indireta</span>
       <h2 class="display h-md reveal" id="s4">A empresa <em>não deposita</em> seu FGTS?</h2>
@@ -513,14 +527,14 @@ section{position:relative}
         <li>exigência de tarefas fora do combinado ou perigosas.</li>
       </ul>
       <p class="note">Na rescisão indireta, você sai com os direitos de quem é demitido sem justa causa: aviso prévio, multa de 40%, saque do FGTS e seguro-desemprego. Antes de pedir demissão, busque orientação.</p>
-      <a class="btn btn--light" data-wa="Olá, Diovana! A empresa não está depositando meu FGTS (ou atrasa meu salário) e gostaria de saber sobre a rescisão indireta." href="#contato" target="_blank" rel="noopener">Quero saber se é o meu caso</a>
+      <a class="btn" data-wa="Olá, Diovana! A empresa não está depositando meu FGTS (ou atrasa meu salário) e gostaria de saber sobre a rescisão indireta." href="#contato" target="_blank" rel="noopener">Quero saber se é o meu caso</a>
     </div>
     <figure class="photo">
       <img src="img/rescisao-indireta.jpg" alt="Diovana Carvalho de braços cruzados, encostada na mesa do escritório" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
-  <article class="service bg-black" id="negado" aria-labelledby="s5">
+  <article class="service bg-paper" id="negado" aria-labelledby="s5">
     <div class="body">
       <span class="tag">INSS</span>
       <h2 class="display h-md reveal" id="s5">Um “não” do INSS <em>pode ser</em> revisto</h2>
@@ -540,7 +554,7 @@ section{position:relative}
     </figure>
   </article>
 
-  <article class="service bg-paper reverse" id="auxilio-doenca" aria-labelledby="s6">
+  <article class="service bg-wine reverse" id="auxilio-doenca" aria-labelledby="s6">
     <div class="body">
       <span class="tag">Auxílio-doença</span>
       <h2 class="display h-md reveal" id="s6">Doente e sem conseguir trabalhar? <em>Veja se</em> tem direito</h2>
@@ -554,14 +568,14 @@ section{position:relative}
         <li>com laudos e exames que mostrem a incapacidade.</li>
       </ul>
       <p class="note">A perícia negou mesmo com laudo? Ou o benefício foi cortado antes de você se recuperar? Isso também pode ser analisado.</p>
-      <a class="btn" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
+      <a class="btn btn--light" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
     </div>
     <figure class="photo">
       <img src="img/auxilio-doenca.jpg" alt="Diovana Carvalho no escritório, segurando uma xícara de café" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
-  <article class="service solo bg-bordo" id="auxilio-doenca-rural" aria-labelledby="s7">
+  <article class="service solo bg-white" id="auxilio-doenca-rural" aria-labelledby="s7">
     <div class="body">
       <div class="solo-a">
       <span class="tag">Rural</span>
@@ -577,12 +591,12 @@ section{position:relative}
         <li>cadastro no sindicato rural, ITR ou CAF (antiga DAP);</li>
         <li>documentos antigos em que conste “lavrador” ou “agricultor”.</li>
       </ul>
-      <a class="btn btn--light" data-wa="Olá, Diovana! Trabalho na roça e gostaria de saber sobre o auxílio-doença rural." href="#contato" target="_blank" rel="noopener">Quero orientação sobre auxílio rural</a>
+      <a class="btn" data-wa="Olá, Diovana! Trabalho na roça e gostaria de saber sobre o auxílio-doença rural." href="#contato" target="_blank" rel="noopener">Quero orientação sobre auxílio rural</a>
       </div>
     </div>
   </article>
 
-  <article class="service bg-black" id="aposentadoria-rural" aria-labelledby="s8">
+  <article class="service bg-paper" id="aposentadoria-rural" aria-labelledby="s8">
     <div class="body">
       <span class="tag">Aposentadoria rural</span>
       <h2 class="display h-md reveal" id="s8">Aposentadoria rural: <em>quem tem</em> direito</h2>
@@ -601,7 +615,7 @@ section{position:relative}
     </figure>
   </article>
 
-  <article class="service solo bg-paper" id="orientacao" aria-labelledby="s9">
+  <article class="service solo bg-wine" id="orientacao" aria-labelledby="s9">
     <div class="body">
       <div class="solo-a">
       <span class="tag">Por que buscar orientação</span>
@@ -616,7 +630,7 @@ section{position:relative}
         <li>os prazos são acompanhados de perto;</li>
         <li>você entende cada opção antes de decidir.</li>
       </ul>
-      <a class="btn" data-wa="Olá, Diovana! Gostaria de uma orientação sobre o meu caso antes de dar qualquer passo." href="#contato" target="_blank" rel="noopener">Quero uma orientação</a>
+      <a class="btn btn--light" data-wa="Olá, Diovana! Gostaria de uma orientação sobre o meu caso antes de dar qualquer passo." href="#contato" target="_blank" rel="noopener">Quero uma orientação</a>
       </div>
     </div>
   </article>
@@ -709,7 +723,7 @@ section{position:relative}
 </section>
 
 <!-- ============ 9. MANIFESTO ============ -->
-<section class="bg-black manifesto" aria-labelledby="manifesto-title">
+<section class="bg-white manifesto" aria-labelledby="manifesto-title">
   <div class="wrap">
     <p class="eyebrow center" style="text-align:center">Manifesto</p>
     <h2 class="display h-lg center reveal" id="manifesto-title" style="text-align:center;max-width:14ch">Por que buscar <em>orientação?</em></h2>
@@ -746,7 +760,7 @@ section{position:relative}
 </section>
 
 <!-- ============ 10. FAQ ============ -->
-<section class="bg-cream" id="duvidas" aria-labelledby="faq-title">
+<section class="bg-white" id="duvidas" aria-labelledby="faq-title">
   <div class="wrap faq-grid">
     <div>
       <p class="eyebrow">Dúvidas frequentes</p>
@@ -788,7 +802,7 @@ section{position:relative}
     <img src="img/encerramento.jpg" alt="" loading="lazy" onerror="this.remove()">
   </figure>
   <div class="wrap"><div class="closing-panel">
-    <p class="eyebrow" style="color:#D9B991">Análise do seu caso</p>
+    <p class="eyebrow" style="color:#D9C6B0">Análise do seu caso</p>
     <h2 class="display h-xl reveal" id="closing-title">O primeiro passo <em>é uma conversa</em></h2>
     <p class="lead reveal">Conte o que está acontecendo. A partir daí, você vai entender quais são seus direitos e quais caminhos existem.</p>
     <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Quero conversar sobre meu caso</a>
