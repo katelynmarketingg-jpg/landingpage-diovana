@@ -7,7 +7,7 @@
 <meta name="description" content="Diovana Carvalho, advogada previdenciária, trabalhista e cível em Santo Antônio da Patrulha/RS. Salário-maternidade, BPC/LOAS, auxílio-doença, rescisão e benefício negado. Atendimento presencial e online.">
 <link rel="canonical" href="https://[DOMINIO]/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1E1611">
+<meta name="theme-color" content="#260101">
 
 <!-- Open Graph (compartilhamento no WhatsApp/Facebook) -->
 <meta property="og:type" content="website">
@@ -57,18 +57,19 @@
 @font-face{font-family:"Cloud Lucent";src:local("Cloud Lucent"),local("CloudLucent-Regular"),url("fonts/CloudLucent-Regular.woff2") format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
 @font-face{font-family:"Cloud Lucent";src:local("Cloud Lucent Italic"),local("CloudLucent-Italic"),url("fonts/CloudLucent-Italic.woff2") format("woff2");font-weight:400 600;font-style:italic;font-display:swap}
 :root{
-  --black:#1E1611;
-  --ink:#2A1F18;
-  --cream:#F0E1CE;
-  --paper:#F8F1E7;
-  --wine:#583E2E;
-  --wine-2:#6E1C26;
-  --accent:#6E1C26;      /* bordô: detalhes sobre fundo claro (contraste 10:1 com o creme) */
-  --accent-light:#D08A92; /* bordô claro: detalhes sobre fundo escuro */
-  --muted:#B8A491;      /* sobre marrom-escuro: contraste 7:1 (AA) */
-  --muted-dark:#6A5543; /* sobre creme: contraste 5,5:1 (AA) */
-  --line-dark:rgba(240,225,206,.18);
-  --line-light:rgba(88,62,46,.22);
+  --black:#260101;
+  --ink:#260101;
+  --cream:#F3E8D8;
+  --beige:#D9B991;
+  --paper:#EADBC4;
+  --wine:#402814;
+  --wine-2:#400106;
+  --accent:#400106;      /* bordô da marca */
+  --accent-light:#D9B991; /* bege: destaques sobre fundo escuro */
+  --muted:#D9B991;      /* bege sobre fundo escuro */
+  --muted-dark:#4A2F18; /* marrom sobre bege */
+  --line-dark:rgba(243,232,216,.18);
+  --line-light:rgba(64,40,20,.22);
   --serif:"Cloud Lucent", "Playfair Display", Georgia, serif;
   --label:"Montserrat", "Inter", system-ui, sans-serif;
   --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -84,7 +85,7 @@ img{display:block;max-width:100%}
 a{color:inherit}
 p{margin:0 0 1em}
 ul{margin:0;padding:0;list-style:none}
-:focus-visible{outline:2px solid #B8A491;outline-offset:3px}
+:focus-visible{outline:2px solid #D9B991;outline-offset:3px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .skip{position:absolute;left:1rem;top:-3rem;background:var(--cream);color:var(--black);padding:.6rem 1rem;z-index:100}
 .skip:focus{top:1rem}
@@ -100,21 +101,21 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ---------- Botões ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:var(--accent);color:var(--cream);font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1.15rem 1.9rem;border-radius:999px;border:1px solid var(--accent);transition:background .3s, border-color .3s, transform .3s;min-height:48px;text-align:center}
-.btn:hover{background:#8A2633;border-color:#8A2633;color:#fff}
+.btn:hover{background:#6B0A12;border-color:#6B0A12;color:#fff}
 .btn--light{background:var(--cream);color:var(--accent);border-color:var(--cream)}
 .btn--light:hover{background:#fff;border-color:#fff}
 .link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--label);font-weight:600;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:.6rem 0;border-bottom:1px solid currentColor;transition:gap .3s}
 .link:hover{gap:.9rem}
 
 /* ---------- Fotos (placeholder editorial) ---------- */
-.photo{position:relative;margin:0;overflow:hidden;background:linear-gradient(160deg,#4A3627 0%,#1E1611 70%);border-radius:var(--radius);min-height:320px}
-.photo::after{content:attr(data-label);position:absolute;inset:auto 1rem 1rem 1rem;font-family:var(--label);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,225,206,.55);pointer-events:none}
+.photo{position:relative;margin:0;overflow:hidden;background:linear-gradient(160deg,#402814 0%,#1E1611 70%);border-radius:var(--radius);min-height:320px}
+.photo::after{content:attr(data-label);position:absolute;inset:auto 1rem 1rem 1rem;font-family:var(--label);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(243,232,216,.55);pointer-events:none}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1.4s cubic-bezier(.2,.7,.2,1);z-index:1}
 .photo:hover img{transform:scale(1.045)}
 
 /* ---------- Header ---------- */
 .header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem var(--pad);transition:background .4s, padding .4s, border-color .4s;border-bottom:1px solid transparent}
-.header.scrolled{background:rgba(30,22,17,.94);backdrop-filter:blur(8px);padding-top:.7rem;padding-bottom:.7rem;border-color:var(--line-dark)}
+.header.scrolled{background:rgba(38,1,1,.94);backdrop-filter:blur(8px);padding-top:.7rem;padding-bottom:.7rem;border-color:var(--line-dark)}
 .logo{text-decoration:none;display:flex;align-items:center;gap:.65rem;line-height:1}
 .logo-mark{height:38px;width:auto}
 .logo-name{height:10px;width:auto}
@@ -122,7 +123,7 @@ ul{margin:0;padding:0;list-style:none}
 @media (min-width:600px){.logo-mark{height:44px}.logo-name{height:13px}}
 .logo b{font-family:var(--serif);font-weight:400;font-size:1.05rem;letter-spacing:.1em;white-space:nowrap}
 @media (min-width:600px){.logo b{font-size:1.3rem;letter-spacing:.14em}}
-.logo span{font-family:var(--script);font-size:1.15rem;margin-top:-.1rem;margin-left:auto;color:#B8A491}
+.logo span{font-family:var(--script);font-size:1.15rem;margin-top:-.1rem;margin-left:auto;color:#D9B991}
 .nav{display:none}
 .nav a{font-family:var(--label);font-weight:500;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;opacity:.85;transition:opacity .3s}
 .nav a:hover{opacity:1}
@@ -148,19 +149,19 @@ ul{margin:0;padding:0;list-style:none}
 .hero .photo::after{inset:auto var(--pad) 1.25rem auto;text-align:right}
 .hero .photo img{object-position:70% 15%}
 @media (min-width:960px){.hero .photo img{object-position:50% 2%}.hero .hero-inner{max-width:560px}.hero .display{font-size:clamp(3.2rem,5vw,4.8rem);max-width:13ch}}
-.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:140px;z-index:2;background:linear-gradient(180deg,rgba(30,22,17,.55),rgba(30,22,17,0))}
-.hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(58,40,29,.94) 0%,rgba(58,40,29,.82) 45%,rgba(58,40,29,.4) 62%,rgba(58,40,29,0) 78%)}
-@media (min-width:960px){.hero::after{background:linear-gradient(90deg,rgba(58,40,29,.9) 0%,rgba(58,40,29,.72) 30%,rgba(58,40,29,.25) 50%,rgba(58,40,29,0) 62%)}}
-.closing::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(58,40,29,.94) 0%,rgba(58,40,29,.78) 50%,rgba(58,40,29,.35) 100%)}
-@media (min-width:960px){.closing::after{background:linear-gradient(90deg,rgba(58,40,29,.92) 0%,rgba(58,40,29,.75) 32%,rgba(58,40,29,.2) 55%,rgba(58,40,29,0) 66%)}}
-.closing .wrap{text-shadow:0 1px 18px rgba(46,30,20,.45)}
-.hero-inner{position:relative;z-index:3;max-width:1100px;text-shadow:0 1px 18px rgba(46,30,20,.45)}
-.hero h1.eyebrow{color:#E8D9C5}
-.hero .lead{color:#F0E1CE;margin-bottom:2.2rem}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:140px;z-index:2;background:linear-gradient(180deg,rgba(38,1,1,.55),rgba(38,1,1,0))}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(64,40,20,.94) 0%,rgba(64,40,20,.82) 45%,rgba(64,40,20,.4) 62%,rgba(64,40,20,0) 78%)}
+@media (min-width:960px){.hero::after{background:linear-gradient(90deg,rgba(64,40,20,.9) 0%,rgba(64,40,20,.72) 30%,rgba(64,40,20,.25) 50%,rgba(64,40,20,0) 62%)}}
+.closing::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(0deg,rgba(64,40,20,.94) 0%,rgba(64,40,20,.78) 50%,rgba(64,40,20,.35) 100%)}
+@media (min-width:960px){.closing::after{background:linear-gradient(90deg,rgba(64,40,20,.92) 0%,rgba(64,40,20,.75) 32%,rgba(64,40,20,.2) 55%,rgba(64,40,20,0) 66%)}}
+.closing .wrap{text-shadow:0 1px 18px rgba(38,1,1,.45)}
+.hero-inner{position:relative;z-index:3;max-width:1100px;text-shadow:0 1px 18px rgba(38,1,1,.45)}
+.hero h1.eyebrow{color:#F3E8D8}
+.hero .lead{color:#F3E8D8;margin-bottom:2.2rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center}
 
 /* ---------- Marquee ---------- */
-.marquee{background:var(--accent);overflow:hidden;border-top:1px solid rgba(240,225,206,.12);border-bottom:1px solid rgba(240,225,206,.12)}
+.marquee{background:var(--accent);overflow:hidden;border-top:1px solid rgba(243,232,216,.12);border-bottom:1px solid rgba(243,232,216,.12)}
 .marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
 .marquee span{font-family:var(--label);font-weight:500;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;padding:1.15rem 0}
 @keyframes marquee{to{transform:translateX(-50%)}}
@@ -169,12 +170,12 @@ ul{margin:0;padding:0;list-style:none}
 section{position:relative}
 .wrap{max-width:1280px;margin:0 auto;padding:var(--section) var(--pad)}
 .bg-black{background:var(--black);color:var(--cream)}
-.bg-cream{background:var(--cream);color:var(--black)}
+.bg-cream{background:var(--beige);color:var(--black)}
 .bg-paper{background:var(--paper);color:var(--black)}
 .bg-wine{background:var(--wine);color:var(--cream)}
 .bg-cream .eyebrow,.bg-paper .eyebrow{color:var(--accent)}
 .bg-black .eyebrow{color:var(--muted)}
-.bg-wine .eyebrow{color:#D9C6B0}
+.bg-wine .eyebrow{color:#D9B991}
 .bg-cream .muted,.bg-paper .muted{color:var(--muted-dark)}
 .bg-black .muted{color:var(--muted)}
 .center{text-align:center;margin-left:auto;margin-right:auto}
@@ -185,7 +186,7 @@ section{position:relative}
 .pillar{padding:2rem 0;border-bottom:1px solid var(--line-dark)}
 .pillar .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--accent-light)}
 .pillar h3{font-family:var(--label);font-weight:600;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:.6rem 0 .7rem}
-.pillar p{color:#D3C2AE;margin:0;max-width:30ch}
+.pillar p{color:#E6D2B5;margin:0;max-width:30ch}
 @media (min-width:860px){
   .pillars{grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line-dark)}
   .pillar{padding:2.5rem 2.2rem;border-bottom:0;border-left:1px solid var(--line-dark)}
@@ -196,7 +197,7 @@ section{position:relative}
 .ident{display:grid;gap:3rem}
 .ident .photo{min-height:420px}
 .num-list{border-top:1px solid var(--line-light)}
-.num-list a{display:grid;grid-template-columns:3.2rem 1fr auto;gap:1rem;align-items:baseline;padding:1.35rem 0;border-bottom:1px solid var(--line-light);text-decoration:none;transition:padding .35s, color .35s}
+.num-list a{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:baseline;padding:1.35rem 0;border-bottom:1px solid var(--line-light);text-decoration:none;transition:padding .35s, color .35s}
 .num-list a:hover{padding-left:.6rem;color:var(--accent)}
 .num-list .n{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--accent)}
 .num-list .t{font-size:1.05rem;line-height:1.5}
@@ -237,9 +238,9 @@ section{position:relative}
 .service.bg-paper .note,.service.bg-paper .small{color:var(--muted-dark);opacity:1}
 
 .bg-bordo{background:var(--accent);color:var(--cream)}
-.bg-bordo .eyebrow,.bg-bordo .small{color:#EBC3C8}
-.service.bg-bordo .checks li::before{color:#EBC3C8}
-.service.bg-bordo .checks,.service.bg-bordo .checks li{border-color:rgba(240,225,206,.22)}
+.bg-bordo .eyebrow,.bg-bordo .small{color:#D9B991}
+.service.bg-bordo .checks li::before{color:#D9B991}
+.service.bg-bordo .checks,.service.bg-bordo .checks li{border-color:rgba(243,232,216,.22)}
 /* palavras em itálico dos títulos em bordô (fundos claros) e bordô claro (fundos escuros) */
 .bg-cream .display em,.bg-paper .display em,.service.bg-paper .display em{color:var(--accent)}
 .bg-black .display em,.service.bg-black .display em,.manifesto .display em{color:var(--accent-light)}
@@ -257,7 +258,7 @@ section{position:relative}
 .tab-icon::before,.tab-icon::after{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:currentColor;transition:transform .35s}
 .tab-icon::after{transform:rotate(90deg)}
 .tab.open .tab-icon::after{transform:rotate(0)}
-.tab-panel{display:none;padding:0 0 2rem 3.4rem}
+.tab-panel{display:none;padding:0 0 2rem 0}
 .tab.open .tab-panel{display:block;animation:fade .5s ease}
 .tab-panel h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:1;margin:0 0 1rem}
 .tab-panel p{max-width:46ch}
@@ -267,8 +268,8 @@ section{position:relative}
   .tabs{display:flex;height:560px;border-top:0;border-left:1px solid var(--line-light)}
   .tab{display:flex;flex:0 0 86px;border-bottom:0;border-right:1px solid var(--line-light);transition:flex .6s cubic-bezier(.6,0,.2,1);overflow:hidden}
   .tab.open{flex:1 1 auto}
-  .tab-btn{flex:0 0 86px;width:86px;flex-direction:column;justify-content:space-between;align-items:center;padding:1.6rem 0;height:100%}
-  .tab-btn:hover{background:rgba(88,62,46,.06)}
+  .tab-btn{flex:0 0 86px;width:86px;flex-direction:column;justify-content:flex-end;align-items:center;padding:1.6rem 0;height:100%}
+  .tab-btn:hover{background:rgba(64,40,20,.06)}
   .tab-num{flex:none}
   .tab-title{writing-mode:vertical-rl;transform:rotate(180deg);flex:none;white-space:nowrap}
   .tab-icon{display:none}
@@ -292,9 +293,9 @@ section{position:relative}
 .monogram{position:absolute;right:-6%;bottom:-8%;width:min(78%,560px);height:auto;opacity:.08;pointer-events:none;user-select:none}
 .about .body > *{position:relative}
 .quote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.8rem,4.6vw,2.9rem);line-height:1.15;margin:0 0 2.2rem;max-width:20ch}
-.about p{max-width:42ch;color:#F3E9DC}
-.signature{font-family:var(--script);font-size:3rem;line-height:1;margin:2rem 0 .4rem;color:#F0E1CE}
-.oab{font-family:var(--label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#D9C6B0}
+.about p{max-width:42ch;color:#F3E8D8}
+.signature{font-family:var(--script);font-size:3rem;line-height:1;margin:2rem 0 .4rem;color:#F3E8D8}
+.oab{font-family:var(--label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#D9B991}
 @media (min-width:960px){.about{grid-template-columns:1fr 1fr}.about .photo{min-height:100%}}
 
 /* ---------- FAQ ---------- */
@@ -316,7 +317,7 @@ section{position:relative}
 
 .closing .wrap{position:relative;z-index:3;padding-top:clamp(5rem,13vw,9rem);padding-bottom:clamp(5rem,13vw,9rem)}
 @media (min-width:960px){.closing{text-align:left}.closing .closing-panel{margin:0;max-width:560px}.closing .closing-panel .lead{margin-left:0}.closing .display{font-size:clamp(3rem,4.6vw,4.4rem)}}
-.closing .lead{margin:0 auto 2.5rem;color:#EADBC7}
+.closing .lead{margin:0 auto 2.5rem;color:#F3E8D8}
 
 /* ---------- Rodapé ---------- */
 .footer{background:var(--black);border-top:1px solid var(--line-dark);padding:4rem var(--pad) 7rem;font-size:.95rem}
@@ -330,7 +331,7 @@ section{position:relative}
 @media (min-width:960px){.footer{padding-bottom:4rem}}
 
 /* ---------- Botão flutuante (mobile) ---------- */
-.float-wa{position:fixed;right:1rem;bottom:1rem;z-index:40;display:flex;align-items:center;gap:.55rem;background:var(--accent);color:var(--cream);text-decoration:none;font-family:var(--label);font-weight:600;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem 1.15rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid rgba(240,225,206,.18);opacity:0;transform:translateY(20px);transition:opacity .4s, transform .4s;pointer-events:none}
+.float-wa{position:fixed;right:1rem;bottom:1rem;z-index:40;display:flex;align-items:center;gap:.55rem;background:var(--accent);color:var(--cream);text-decoration:none;font-family:var(--label);font-weight:600;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem 1.15rem;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid rgba(243,232,216,.18);opacity:0;transform:translateY(20px);transition:opacity .4s, transform .4s;pointer-events:none}
 .float-wa.show{opacity:1;transform:none;pointer-events:auto}
 .float-wa svg{width:18px;height:18px}
 @media (min-width:960px){.float-wa{display:none}}
@@ -418,13 +419,13 @@ section{position:relative}
       <h2 class="display h-lg reveal" id="ident-title">Alguma dessas situações <em>é a sua?</em></h2>
       <p class="muted reveal" style="max-width:38ch;margin-bottom:2.5rem">Toque na frase que mais se parece com o seu momento e veja o que pode ser feito.</p>
       <ul class="num-list">
-        <li><a href="#maternidade"><span class="n">01</span><span class="t">Estou grávida (ou tive bebê há pouco) e não sei se tenho direito ao salário-maternidade.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#bpc"><span class="n">02</span><span class="t">Cuido de um idoso ou de uma pessoa com deficiência, e a renda da família é baixa.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#rescisao"><span class="n">03</span><span class="t">Saí do emprego e não sei se recebi tudo certo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#rescisao-indireta"><span class="n">04</span><span class="t">A empresa não deposita meu FGTS ou atrasa meu salário.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#negado"><span class="n">05</span><span class="t">Meu pedido no INSS foi negado e eu não entendi o motivo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#auxilio-doenca"><span class="n">06</span><span class="t">Estou doente e não consigo trabalhar.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#aposentadoria-rural"><span class="n">07</span><span class="t">Trabalho na roça e quero saber da minha aposentadoria.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#maternidade"><span class="t">Estou grávida (ou tive bebê há pouco) e não sei se tenho direito ao salário-maternidade.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#bpc"><span class="t">Cuido de um idoso ou de uma pessoa com deficiência, e a renda da família é baixa.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#rescisao"><span class="t">Saí do emprego e não sei se recebi tudo certo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#rescisao-indireta"><span class="t">A empresa não deposita meu FGTS ou atrasa meu salário.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#negado"><span class="t">Meu pedido no INSS foi negado e eu não entendi o motivo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#auxilio-doenca"><span class="t">Estou doente e não consigo trabalhar.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#aposentadoria-rural"><span class="t">Trabalho na roça e quero saber da minha aposentadoria.</span><span class="arrow" aria-hidden="true">→</span></a></li>
       </ul>
     </div>
     <figure class="photo reveal" data-label="Foto: detalhe editorial · mãos, documentos, tons quentes">
@@ -438,7 +439,7 @@ section{position:relative}
 
   <article class="service bg-wine" id="maternidade" aria-labelledby="s1">
     <div class="body">
-      <span class="tag">Situação 01 · Salário-maternidade</span>
+      <span class="tag">Salário-maternidade</span>
       <h2 class="display h-md reveal" id="s1">Grávida? <em>Uma única</em> contribuição pode bastar</h2>
       <p class="reveal">Até 2024, autônomas, MEIs e quem pagava o INSS por conta própria precisavam de 10 contribuições para receber o salário-maternidade.</p>
       <p class="reveal">O STF derrubou essa exigência. Hoje, com uma contribuição feita antes do parto, você já pode ter direito ao benefício.</p>
@@ -459,7 +460,7 @@ section{position:relative}
 
   <article class="service bg-black reverse" id="bpc" aria-labelledby="s2">
     <div class="body">
-      <span class="tag">Situação 02 · BPC/LOAS</span>
+      <span class="tag">BPC/LOAS</span>
       <h2 class="display h-md reveal" id="s2">Um salário mínimo por mês, <em>mesmo sem</em> nunca ter contribuído</h2>
       <p class="reveal">O BPC/LOAS é um benefício da assistência social, pago pelo INSS. Para receber, a pessoa não precisa ter contribuído nenhuma vez.</p>
       <p class="reveal">LOAS é a Lei Orgânica da Assistência Social, a lei que criou o benefício.</p>
@@ -480,7 +481,7 @@ section{position:relative}
 
   <article class="service bg-paper" id="rescisao" aria-labelledby="s3">
     <div class="body">
-      <span class="tag">Situação 03 · Trabalhista</span>
+      <span class="tag">Trabalhista</span>
       <h2 class="display h-md reveal" id="s3">Saiu do emprego? <em>Confira</em> se as contas fecham</h2>
       <p class="reveal">Na hora da demissão, é comum assinar tudo com pressa. Depois vem a dúvida: estava tudo certo?</p>
       <p class="reveal">Eu confiro o termo de rescisão, os contracheques e o extrato do FGTS para ver se algo ficou para trás.</p>
@@ -501,7 +502,7 @@ section{position:relative}
 
   <article class="service bg-bordo reverse" id="rescisao-indireta" aria-labelledby="s4">
     <div class="body">
-      <span class="tag">Situação 04 · Rescisão indireta</span>
+      <span class="tag">Rescisão indireta</span>
       <h2 class="display h-md reveal" id="s4">A empresa <em>não deposita</em> seu FGTS?</h2>
       <p class="reveal">Quando quem descumpre o contrato é a empresa, o trabalhador pode pedir a rescisão indireta. Funciona como uma “justa causa do empregador”.</p>
       <p class="reveal">Em 2025, o TST (Tribunal Superior do Trabalho) firmou o entendimento de que FGTS não depositado ou depositado de forma irregular já é motivo suficiente.</p>
@@ -521,7 +522,7 @@ section{position:relative}
 
   <article class="service bg-black" id="negado" aria-labelledby="s5">
     <div class="body">
-      <span class="tag">Situação 05 · INSS</span>
+      <span class="tag">INSS</span>
       <h2 class="display h-md reveal" id="s5">Um “não” do INSS <em>pode ser</em> revisto</h2>
       <p class="reveal">Muitos pedidos são negados por falta de um documento, um erro no cadastro ou uma perícia rápida demais.</p>
       <p class="reveal">Entender o motivo da negativa é o primeiro passo. Ele está na carta de indeferimento, que fica disponível no Meu INSS.</p>
@@ -541,7 +542,7 @@ section{position:relative}
 
   <article class="service bg-paper reverse" id="auxilio-doenca" aria-labelledby="s6">
     <div class="body">
-      <span class="tag">Situação 06 · Auxílio-doença</span>
+      <span class="tag">Auxílio-doença</span>
       <h2 class="display h-md reveal" id="s6">Doente e sem conseguir trabalhar? <em>Veja se</em> tem direito</h2>
       <p class="reveal">Hoje o nome oficial é “benefício por incapacidade temporária”, mas todo mundo conhece como auxílio-doença.</p>
       <p class="reveal">Ele é pago a quem fica sem condições de trabalhar por mais de 15 dias por causa de doença ou acidente.</p>
@@ -563,7 +564,7 @@ section{position:relative}
   <article class="service solo bg-bordo" id="auxilio-doenca-rural" aria-labelledby="s7">
     <div class="body">
       <div class="solo-a">
-      <span class="tag">Situação 07 · Rural</span>
+      <span class="tag">Rural</span>
       <h2 class="display h-md reveal" id="s7">Trabalha na roça? <em>Você também</em> pode se afastar pelo INSS</h2>
       <p class="reveal">Quem trabalha no campo com a família, como agricultor ou pescador artesanal, é chamado de segurado especial.</p>
       <p class="reveal">Pode ter direito ao auxílio-doença mesmo sem pagar o INSS mês a mês, desde que comprove o trabalho rural nos 12 meses antes de adoecer.</p>
@@ -583,7 +584,7 @@ section{position:relative}
 
   <article class="service bg-black" id="aposentadoria-rural" aria-labelledby="s8">
     <div class="body">
-      <span class="tag">Situação 08 · Aposentadoria rural</span>
+      <span class="tag">Aposentadoria rural</span>
       <h2 class="display h-md reveal" id="s8">Aposentadoria rural: <em>quem tem</em> direito</h2>
       <p class="reveal">Quem dedicou a vida ao trabalho no campo pode se aposentar mais cedo e, no caso do segurado especial, sem ter pago o INSS. O que conta é comprovar o trabalho rural.</p>
       <p class="small">Os requisitos:</p>
@@ -603,7 +604,7 @@ section{position:relative}
   <article class="service solo bg-paper" id="orientacao" aria-labelledby="s9">
     <div class="body">
       <div class="solo-a">
-      <span class="tag">Situação 09 · Por que buscar orientação</span>
+      <span class="tag">Por que buscar orientação</span>
       <h2 class="display h-md reveal" id="s9">Orientação <em>desde o início</em> evita perder tempo e dinheiro</h2>
       <p class="reveal">Um pedido feito sem os documentos certos pode ser negado, e cada negativa significa meses de espera.</p>
       <p class="reveal">Uma rescisão assinada sem conferir pode deixar valores para trás. E alguns direitos têm prazo.</p>
@@ -635,7 +636,7 @@ section{position:relative}
 
     <div class="tabs" role="list">
       <div class="tab open" role="listitem" id="tab-1">
-        <button class="tab-btn" aria-expanded="true" aria-controls="p1"><span class="tab-num">01</span><span class="tab-title">Auxílio-acidente</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="true" aria-controls="p1"><span class="tab-title">Auxílio-acidente</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p1">
           <h3>Auxílio-acidente</h3>
           <p>Uma indenização mensal do INSS para quem ficou com uma sequela permanente depois de um acidente, de trabalho ou não, e passou a ter mais dificuldade para trabalhar.</p>
@@ -644,7 +645,7 @@ section{position:relative}
         </div>
       </div>
       <div class="tab" role="listitem" id="tab-2">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p2"><span class="tab-num">02</span><span class="tab-title">Doenças ocupacionais</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="false" aria-controls="p2"><span class="tab-title">Doenças ocupacionais</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p2">
           <h3>Doenças ocupacionais</h3>
           <p>LER/DORT, problemas de coluna, perda auditiva, esgotamento mental. Quando a doença tem relação com o trabalho, isso pode gerar direitos no INSS e também em relação à empresa.</p>
@@ -653,7 +654,7 @@ section{position:relative}
         </div>
       </div>
       <div class="tab" role="listitem" id="tab-3">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p3"><span class="tab-num">03</span><span class="tab-title">Pensão por morte</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="false" aria-controls="p3"><span class="tab-title">Pensão por morte</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p3">
           <h3>Pensão por morte</h3>
           <p>Benefício para a família de quem faleceu sendo segurado do INSS ou aposentado.</p>
@@ -662,7 +663,7 @@ section{position:relative}
         </div>
       </div>
       <div class="tab" role="listitem" id="tab-4">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p4"><span class="tab-num">04</span><span class="tab-title">Outras questões trabalhistas</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="false" aria-controls="p4"><span class="tab-title">Outras questões trabalhistas</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p4">
           <h3>Outras questões trabalhistas</h3>
           <p>Horas extras não pagas, adicional de insalubridade ou periculosidade, desvio de função, trabalho sem carteira assinada, assédio moral.</p>
@@ -671,7 +672,7 @@ section{position:relative}
         </div>
       </div>
       <div class="tab" role="listitem" id="tab-5">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p5"><span class="tab-num">05</span><span class="tab-title">Contratos bancários</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="false" aria-controls="p5"><span class="tab-title">Contratos bancários</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p5">
           <h3>Contratos bancários</h3>
           <p>Descontos que você não reconhece no benefício ou no salário, empréstimo consignado que você não contratou, cobranças e juros fora do combinado.</p>
@@ -679,7 +680,7 @@ section{position:relative}
         </div>
       </div>
       <div class="tab" role="listitem" id="tab-6">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p6"><span class="tab-num">06</span><span class="tab-title">Direito Civil</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="false" aria-controls="p6"><span class="tab-title">Direito Civil</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p6">
           <h3>Direito Civil</h3>
           <p>Contratos, cobranças, indenizações e outras questões do dia a dia que pedem orientação jurídica.</p>
@@ -696,10 +697,10 @@ section{position:relative}
     <p class="eyebrow">Como funciona</p>
     <h2 class="display h-lg reveal" id="como-title" style="max-width:16ch">Do primeiro contato <em>ao</em> acompanhamento</h2>
     <ol class="steps" style="list-style:none;padding:0">
-      <li class="step reveal"><span class="n">01</span><h3>Contato</h3><p>Você manda uma mensagem pelo WhatsApp e conta, do seu jeito, o que está acontecendo.</p></li>
-      <li class="step reveal"><span class="n">02</span><h3>Análise</h3><p>Avalio a sua situação e os documentos que você tem. Se faltar algo, explico onde conseguir.</p></li>
-      <li class="step reveal"><span class="n">03</span><h3>Orientação</h3><p>Você recebe uma explicação clara: quais caminhos existem e o que cada um envolve.</p></li>
-      <li class="step reveal"><span class="n">04</span><h3>Acompanhamento</h3><p>Se decidir seguir, acompanho cada etapa e mantenho você informado(a).</p></li>
+      <li class="step reveal"><h3 style="margin-top:0">Contato</h3><p>Você manda uma mensagem pelo WhatsApp e conta, do seu jeito, o que está acontecendo.</p></li>
+      <li class="step reveal"><h3 style="margin-top:0">Análise</h3><p>Avalio a sua situação e os documentos que você tem. Se faltar algo, explico onde conseguir.</p></li>
+      <li class="step reveal"><h3 style="margin-top:0">Orientação</h3><p>Você recebe uma explicação clara: quais caminhos existem e o que cada um envolve.</p></li>
+      <li class="step reveal"><h3 style="margin-top:0">Acompanhamento</h3><p>Se decidir seguir, acompanho cada etapa e mantenho você informado(a).</p></li>
     </ol>
     <div style="margin-top:3rem">
       <a class="btn" data-wa="Olá, Diovana! Gostaria de dar o primeiro passo e contar o meu caso." href="#contato" target="_blank" rel="noopener">Quero dar o primeiro passo</a>
@@ -718,9 +719,9 @@ section{position:relative}
       <p>Orientação jurídica serve para isso: transformar dúvida em informação e informação em uma decisão segura.</p>
     </div>
     <div class="pillars">
-      <div class="pillar reveal"><span class="n">01</span><h3>Atendimento individualizado</h3><p>Cada história é ouvida do começo. Sem resposta pronta.</p></div>
-      <div class="pillar reveal"><span class="n">02</span><h3>Linguagem clara</h3><p>Você entende cada passo, sem juridiquês.</p></div>
-      <div class="pillar reveal"><span class="n">03</span><h3>Presencial e online</h3><p>No escritório em Santo Antônio da Patrulha ou pelo WhatsApp, de onde você estiver.</p></div>
+      <div class="pillar reveal"><h3 style="margin-top:0">Atendimento individualizado</h3><p>Cada história é ouvida do começo. Sem resposta pronta.</p></div>
+      <div class="pillar reveal"><h3 style="margin-top:0">Linguagem clara</h3><p>Você entende cada passo, sem juridiquês.</p></div>
+      <div class="pillar reveal"><h3 style="margin-top:0">Presencial e online</h3><p>No escritório em Santo Antônio da Patrulha ou pelo WhatsApp, de onde você estiver.</p></div>
     </div>
   </div>
 </section>
@@ -787,7 +788,7 @@ section{position:relative}
     <img src="img/encerramento.jpg" alt="" loading="lazy" onerror="this.remove()">
   </figure>
   <div class="wrap"><div class="closing-panel">
-    <p class="eyebrow" style="color:#D9C6B0">Análise do seu caso</p>
+    <p class="eyebrow" style="color:#D9B991">Análise do seu caso</p>
     <h2 class="display h-xl reveal" id="closing-title">O primeiro passo <em>é uma conversa</em></h2>
     <p class="lead reveal">Conte o que está acontecendo. A partir daí, você vai entender quais são seus direitos e quais caminhos existem.</p>
     <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Quero conversar sobre meu caso</a>
