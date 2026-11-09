@@ -107,13 +107,17 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- Fotos (placeholder editorial) ---------- */
 .photo{position:relative;margin:0;overflow:hidden;background:linear-gradient(160deg,#4A3627 0%,#1E1611 70%);border-radius:var(--radius);min-height:320px}
 .photo::after{content:attr(data-label);position:absolute;inset:auto 1rem 1rem 1rem;font-family:var(--label);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(240,225,206,.55);pointer-events:none}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:saturate(.82) contrast(1.04) sepia(.06);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);z-index:1}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 1.4s cubic-bezier(.2,.7,.2,1);z-index:1}
 .photo:hover img{transform:scale(1.045)}
 
 /* ---------- Header ---------- */
 .header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem var(--pad);transition:background .4s, padding .4s, border-color .4s;border-bottom:1px solid transparent}
 .header.scrolled{background:rgba(30,22,17,.94);backdrop-filter:blur(8px);padding-top:.7rem;padding-bottom:.7rem;border-color:var(--line-dark)}
-.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.logo{text-decoration:none;display:flex;align-items:center;gap:.65rem;line-height:1}
+.logo-mark{height:38px;width:auto}
+.logo-name{height:10px;width:auto}
+@media (max-width:479px){.logo-name{display:none}}
+@media (min-width:600px){.logo-mark{height:44px}.logo-name{height:13px}}
 .logo b{font-family:var(--serif);font-weight:400;font-size:1.05rem;letter-spacing:.1em;white-space:nowrap}
 @media (min-width:600px){.logo b{font-size:1.3rem;letter-spacing:.14em}}
 .logo span{font-family:var(--script);font-size:1.15rem;margin-top:-.1rem;margin-left:auto;color:#B8A491}
@@ -140,11 +144,11 @@ ul{margin:0;padding:0;list-style:none}
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:8rem var(--pad) clamp(3rem,8vw,6rem);overflow:hidden}
 .hero .photo{position:absolute;inset:0;border-radius:0;min-height:0}
 .hero .photo::after{inset:auto var(--pad) 1.25rem auto;text-align:right}
-.hero .photo img{object-position:70% 15%;filter:saturate(.75) contrast(1.05) brightness(.82)}
-@media (min-width:960px){.hero .photo img{object-position:50% 2%}.hero-inner{max-width:640px}.hero .display{font-size:clamp(3.2rem,5vw,4.8rem);max-width:13ch}}
-.hero::before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(30,22,17,.55) 0%,rgba(30,22,17,.3) 35%,rgba(30,22,17,.9) 100%)}
-@media (min-width:960px){.hero::before{background:linear-gradient(90deg,rgba(30,22,17,.92) 0%,rgba(30,22,17,.7) 40%,rgba(30,22,17,.15) 75%,rgba(30,22,17,.35) 100%)}}
-.hero-inner{position:relative;z-index:3;max-width:1100px}
+.hero .photo img{object-position:70% 15%}
+@media (min-width:960px){.hero .photo img{object-position:50% 2%}.hero .hero-inner{max-width:560px}.hero .display{font-size:clamp(3.2rem,5vw,4.8rem);max-width:13ch}}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:140px;z-index:2;background:linear-gradient(180deg,rgba(30,22,17,.55),rgba(30,22,17,0))}
+.hero-inner{position:relative;z-index:3;max-width:1100px;padding:1.6rem 1.4rem 1.8rem;border-radius:16px;background:rgba(30,22,17,.42);-webkit-backdrop-filter:blur(16px) saturate(1.1);backdrop-filter:blur(16px) saturate(1.1);border:1px solid rgba(240,225,206,.14)}
+@media (min-width:960px){.hero-inner{padding:2.6rem 2.8rem 2.8rem}}
 .hero h1.eyebrow{color:#E8D9C5}
 .hero .lead{color:#F0E1CE;margin-bottom:2.2rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center}
@@ -263,7 +267,7 @@ section{position:relative}
 .about{display:grid}
 .about .photo{border-radius:0;min-height:460px}
 .about .body{position:relative;overflow:hidden;padding:clamp(3.5rem,9vw,7rem) var(--pad)}
-.monogram{position:absolute;right:-.05em;bottom:-.22em;font-family:var(--serif);font-weight:500;font-size:clamp(14rem,38vw,30rem);line-height:1;color:rgba(240,225,206,.06);pointer-events:none;user-select:none;letter-spacing:-.04em}
+.monogram{position:absolute;right:-6%;bottom:-8%;width:min(78%,560px);height:auto;opacity:.08;pointer-events:none;user-select:none}
 .about .body > *{position:relative}
 .quote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.8rem,4.6vw,2.9rem);line-height:1.15;margin:0 0 2.2rem;max-width:20ch}
 .about p{max-width:42ch;color:#F3E9DC}
@@ -286,9 +290,11 @@ section{position:relative}
 /* ---------- Encerramento ---------- */
 .closing{position:relative;overflow:hidden;text-align:center}
 .closing .photo{position:absolute;inset:0;border-radius:0;min-height:0}
-.closing .photo img{filter:saturate(.6) brightness(.7)}
-.closing::before{content:"";position:absolute;inset:0;background:rgba(30,22,17,.78);z-index:2}
-.closing .wrap{position:relative;z-index:3;padding-top:clamp(6rem,15vw,11rem);padding-bottom:clamp(6rem,15vw,11rem)}
+.closing .photo img{object-position:50% 30%}
+
+.closing .wrap{position:relative;z-index:3;padding-top:clamp(5rem,13vw,9rem);padding-bottom:clamp(5rem,13vw,9rem)}
+.closing-panel{max-width:780px;margin:0 auto;padding:2.4rem 1.4rem 2.6rem;border-radius:18px;background:rgba(30,22,17,.45);-webkit-backdrop-filter:blur(18px) saturate(1.1);backdrop-filter:blur(18px) saturate(1.1);border:1px solid rgba(240,225,206,.14)}
+@media (min-width:960px){.closing{text-align:left}.closing .closing-panel{margin:0;max-width:560px;padding:3rem 2.8rem 3.2rem}.closing .lead{margin-left:0}.closing .display{font-size:clamp(3rem,4.6vw,4.4rem)}}
 .closing .lead{margin:0 auto 2.5rem;color:#EADBC7}
 
 /* ---------- Rodapé ---------- */
@@ -313,6 +319,7 @@ section{position:relative}
 .reveal.in{opacity:1;transform:none}
 .no-js .reveal{opacity:1;transform:none}
 
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-inner,.closing-panel{background:rgba(30,22,17,.72)}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -329,8 +336,8 @@ section{position:relative}
 <!-- ============ 1. HEADER ============ -->
 <header class="header" id="topo">
   <a href="#topo" class="logo" aria-label="Diovana Carvalho Advocacia — início">
-    <b>DIOVANA CARVALHO</b>
-    <span>Advocacia</span>
+    <img class="logo-mark" src="img/logo-dc-creme.png" alt="" width="57" height="40">
+    <img class="logo-name" src="img/logo-nome-creme.png" alt="Diovana Carvalho Advocacia" width="183" height="12">
   </a>
   <nav class="nav" aria-label="Principal">
     <a href="#areas">Áreas</a>
@@ -626,7 +633,7 @@ section{position:relative}
     <img src="img/sobre-diovana.jpg" alt="Retrato da advogada Diovana Carvalho com livros de Direito Previdenciário e do Trabalho" loading="lazy" onerror="this.remove()">
   </figure>
   <div class="body bg-wine">
-    <span class="monogram" aria-hidden="true">DC</span>
+    <img class="monogram" src="img/logo-dc-creme.png" alt="" aria-hidden="true" loading="lazy">
     <p class="eyebrow">Sobre</p>
     <p class="quote reveal">Por trás de cada direito, existe uma história que merece ser ouvida.</p>
     <h2 class="display h-md" id="sobre-title" style="font-size:clamp(1.6rem,3.5vw,2.2rem);letter-spacing:.08em">Diovana Carvalho</h2>
@@ -679,14 +686,14 @@ section{position:relative}
 <!-- ============ 11. ENCERRAMENTO ============ -->
 <section class="closing" id="contato" aria-labelledby="closing-title">
   <figure class="photo" data-label="Foto: escritório / detalhe · escura">
-    <img src="img/encerramento.jpg" alt="" style="object-position:50% 30%" loading="lazy" onerror="this.remove()">
+    <img src="img/encerramento.jpg" alt="" loading="lazy" onerror="this.remove()">
   </figure>
-  <div class="wrap">
-    <p class="eyebrow" style="color:#B8A491">Análise do seu caso</p>
+  <div class="wrap"><div class="closing-panel">
+    <p class="eyebrow" style="color:#D9C6B0">Análise do seu caso</p>
     <h2 class="display h-xl reveal" id="closing-title">O primeiro passo <em>é uma conversa</em></h2>
     <p class="lead reveal">Conte o que está acontecendo. A partir daí, você vai entender quais são seus direitos e quais caminhos existem.</p>
     <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Quero conversar sobre meu caso</a>
-  </div>
+  </div></div>
 </section>
 
 </main>
@@ -695,7 +702,8 @@ section{position:relative}
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <h2>Diovana Carvalho</h2>
+      <h2 class="sr-only">Diovana Carvalho</h2>
+      <img src="img/logo-completo-creme.png" alt="Diovana Carvalho — Advocacia Previdenciária e Trabalhista" width="240" height="162" loading="lazy" style="margin-bottom:1.4rem">
       <p class="muted" style="margin-bottom:.4rem">Advogada · OAB/RS [000.000]</p>
       <p class="muted">Direito Previdenciário, Trabalhista e Cível</p>
     </div>
