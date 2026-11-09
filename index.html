@@ -62,7 +62,9 @@
   --cream:#F0E1CE;
   --paper:#F8F1E7;
   --wine:#583E2E;
-  --wine-2:#7E6752;
+  --wine-2:#6E1C26;
+  --accent:#6E1C26;      /* bordô: detalhes sobre fundo claro (contraste 10:1 com o creme) */
+  --accent-light:#D08A92; /* bordô claro: detalhes sobre fundo escuro */
   --muted:#B8A491;      /* sobre marrom-escuro: contraste 7:1 (AA) */
   --muted-dark:#6A5543; /* sobre creme: contraste 5,5:1 (AA) */
   --line-dark:rgba(240,225,206,.18);
@@ -158,7 +160,7 @@ ul{margin:0;padding:0;list-style:none}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:1.2rem 2rem;align-items:center}
 
 /* ---------- Marquee ---------- */
-.marquee{background:var(--wine);overflow:hidden;border-top:1px solid rgba(240,225,206,.12);border-bottom:1px solid rgba(240,225,206,.12)}
+.marquee{background:var(--accent);overflow:hidden;border-top:1px solid rgba(240,225,206,.12);border-bottom:1px solid rgba(240,225,206,.12)}
 .marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
 .marquee span{font-family:var(--label);font-weight:500;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;padding:1.15rem 0}
 @keyframes marquee{to{transform:translateX(-50%)}}
@@ -170,7 +172,7 @@ section{position:relative}
 .bg-cream{background:var(--cream);color:var(--black)}
 .bg-paper{background:var(--paper);color:var(--black)}
 .bg-wine{background:var(--wine);color:var(--cream)}
-.bg-cream .eyebrow,.bg-paper .eyebrow{color:var(--wine)}
+.bg-cream .eyebrow,.bg-paper .eyebrow{color:var(--accent)}
 .bg-black .eyebrow{color:var(--muted)}
 .bg-wine .eyebrow{color:#D9C6B0}
 .bg-cream .muted,.bg-paper .muted{color:var(--muted-dark)}
@@ -181,7 +183,7 @@ section{position:relative}
 .manifesto .text{max-width:40rem;margin:0 auto 4rem;font-size:clamp(1.0625rem,2.2vw,1.2rem)}
 .pillars{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-dark)}
 .pillar{padding:2rem 0;border-bottom:1px solid var(--line-dark)}
-.pillar .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--muted)}
+.pillar .n{font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--accent-light)}
 .pillar h3{font-family:var(--label);font-weight:600;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:.6rem 0 .7rem}
 .pillar p{color:#D3C2AE;margin:0;max-width:30ch}
 @media (min-width:860px){
@@ -195,10 +197,10 @@ section{position:relative}
 .ident .photo{min-height:420px}
 .num-list{border-top:1px solid var(--line-light)}
 .num-list a{display:grid;grid-template-columns:3.2rem 1fr auto;gap:1rem;align-items:baseline;padding:1.35rem 0;border-bottom:1px solid var(--line-light);text-decoration:none;transition:padding .35s, color .35s}
-.num-list a:hover{padding-left:.6rem;color:var(--wine)}
-.num-list .n{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--wine)}
+.num-list a:hover{padding-left:.6rem;color:var(--accent)}
+.num-list .n{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--accent)}
 .num-list .t{font-size:1.05rem;line-height:1.5}
-.num-list .arrow{font-family:var(--label);font-size:.9rem;color:var(--wine)}
+.num-list .arrow{font-family:var(--label);font-size:.9rem;color:var(--accent)}
 @media (min-width:960px){
   .ident{grid-template-columns:1.15fr .85fr;gap:5rem;align-items:start}
   .ident .photo{position:sticky;top:7rem;min-height:640px}
@@ -219,7 +221,9 @@ section{position:relative}
 .service .small{font-family:var(--label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.4rem;opacity:.9}
 .service.bg-paper .checks{border-color:var(--line-light)}
 .service.bg-paper .checks li{border-color:var(--line-light)}
-.service.bg-paper .tag{color:var(--wine)}
+.service.bg-paper .tag{color:var(--accent)}
+.service .checks li::before{color:var(--accent-light);opacity:1}
+.service.bg-paper .checks li::before{color:var(--accent)}
 .service.bg-black{border:1px solid var(--line-dark)}
 @media (min-width:960px){
   .service{grid-template-columns:1fr 1fr;min-height:640px}
@@ -227,13 +231,18 @@ section{position:relative}
   .service.reverse .photo{order:-1}
 }
 
+.service.solo{display:block}
+.service.solo .body{display:grid;gap:1.5rem}
+@media (min-width:960px){.service.solo{min-height:0}.service.solo .body{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}.service.solo .solo-b .checks{margin-top:1rem}}
+.service.bg-paper .note,.service.bg-paper .small{color:var(--muted-dark);opacity:1}
+
 /* ---------- Outras áreas (abas verticais) ---------- */
 .others-head{display:grid;gap:1rem;margin-bottom:3rem}
 @media (min-width:960px){.others-head{grid-template-columns:1fr 1fr;align-items:end}}
 .tabs{border-top:1px solid var(--line-light)}
 .tab{border-bottom:1px solid var(--line-light)}
 .tab-btn{width:100%;display:flex;align-items:center;gap:1rem;background:none;border:0;color:inherit;text-align:left;padding:1.35rem 0;cursor:pointer;font:inherit;min-height:56px}
-.tab-num{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--wine);flex:0 0 2.4rem}
+.tab-num{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--accent);flex:0 0 2.4rem}
 .tab-title{font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;flex:1}
 .tab-icon{width:14px;height:14px;position:relative;flex:0 0 14px}
 .tab-icon::before,.tab-icon::after{content:"";position:absolute;left:0;top:50%;width:100%;height:1px;background:currentColor;transition:transform .35s}
@@ -243,7 +252,7 @@ section{position:relative}
 .tab.open .tab-panel{display:block;animation:fade .5s ease}
 .tab-panel h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;line-height:1;margin:0 0 1rem}
 .tab-panel p{max-width:46ch}
-.tab-panel .link{color:var(--wine);margin-top:.6rem}
+.tab-panel .link{color:var(--accent);margin-top:.6rem}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media (min-width:960px){
   .tabs{display:flex;height:560px;border-top:0;border-left:1px solid var(--line-light)}
@@ -255,13 +264,13 @@ section{position:relative}
   .tab-title{writing-mode:vertical-rl;transform:rotate(180deg);flex:none;white-space:nowrap}
   .tab-icon{display:none}
   .tab-panel{padding:2.4rem 3rem 2.4rem 1.4rem;align-self:flex-end;min-width:420px}
-  .tab.open .tab-btn{color:var(--wine)}
+  .tab.open .tab-btn{color:var(--accent)}
 }
 
 /* ---------- Como funciona ---------- */
 .steps{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-light);margin-top:3rem}
 .step{padding:2rem 0;border-bottom:1px solid var(--line-light)}
-.step .n{font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--wine)}
+.step .n{font-family:var(--serif);font-size:3.2rem;line-height:1;color:var(--accent)}
 .step h3{font-family:var(--label);font-weight:600;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin:1rem 0 .6rem}
 .step p{margin:0}
 @media (min-width:700px){.steps{grid-template-columns:1fr 1fr}.step:nth-child(odd){padding-right:2rem}.step:nth-child(even){padding-left:2rem;border-left:1px solid var(--line-light)}}
@@ -286,7 +295,7 @@ section{position:relative}
 .faq details{border-bottom:1px solid var(--line-light)}
 .faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1.5rem;align-items:center;padding:1.5rem 0;font-family:var(--serif);font-weight:500;font-size:clamp(1.3rem,3vw,1.6rem);line-height:1.2}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--label);font-weight:500;font-size:1.3rem;color:var(--wine);transition:transform .35s;flex:none}
+.faq summary::after{content:"+";font-family:var(--label);font-weight:500;font-size:1.3rem;color:var(--accent);transition:transform .35s;flex:none}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq .a{padding:0 2.5rem 1.6rem 0}
 .faq .a p:last-child{margin:0}
@@ -392,24 +401,6 @@ section{position:relative}
   </div>
 </div>
 
-<!-- ============ 4. MANIFESTO ============ -->
-<section class="bg-black manifesto" aria-labelledby="manifesto-title">
-  <div class="wrap">
-    <p class="eyebrow center" style="text-align:center">Manifesto</p>
-    <h2 class="display h-lg center reveal" id="manifesto-title" style="text-align:center;max-width:14ch">Por que buscar <em>orientação?</em></h2>
-    <div class="text center reveal" style="text-align:center">
-      <p>Ninguém procura uma advogada em um dia comum.</p>
-      <p>Às vezes é um bebê que chegou e um benefício que não veio. Uma demissão sem explicação. Um laudo que o INSS não aceitou.</p>
-      <p>Orientação jurídica serve para isso: transformar dúvida em informação e informação em uma decisão segura.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar reveal"><span class="n">01</span><h3>Atendimento individualizado</h3><p>Cada história é ouvida do começo. Sem resposta pronta.</p></div>
-      <div class="pillar reveal"><span class="n">02</span><h3>Linguagem clara</h3><p>Você entende cada passo, sem juridiquês.</p></div>
-      <div class="pillar reveal"><span class="n">03</span><h3>Presencial e online</h3><p>No escritório em Santo Antônio da Patrulha ou pelo WhatsApp, de onde você estiver.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ 5. VOCÊ SE IDENTIFICA? ============ -->
 <section class="bg-cream" id="identifica" aria-labelledby="ident-title">
   <div class="wrap ident">
@@ -418,12 +409,13 @@ section{position:relative}
       <h2 class="display h-lg reveal" id="ident-title">Alguma dessas situações <em>é a sua?</em></h2>
       <p class="muted reveal" style="max-width:38ch;margin-bottom:2.5rem">Toque na frase que mais se parece com o seu momento e veja o que pode ser feito.</p>
       <ul class="num-list">
-        <li><a href="#maternidade"><span class="n">01</span><span class="t">Tive um bebê (ou vou ter) e não sei se recebo salário-maternidade.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#rescisao"><span class="n">02</span><span class="t">Fui demitido(a) e acho que a rescisão veio errada.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#bpc"><span class="n">03</span><span class="t">Cuido de um idoso ou de uma pessoa com deficiência e a renda da família é baixa.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#auxilio-doenca"><span class="n">04</span><span class="t">Estou doente, não consigo trabalhar e o INSS não me afastou.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#maternidade"><span class="n">01</span><span class="t">Estou grávida (ou tive bebê há pouco) e não sei se tenho direito ao salário-maternidade.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#bpc"><span class="n">02</span><span class="t">Cuido de um idoso ou de uma pessoa com deficiência, e a renda da família é baixa.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#rescisao"><span class="n">03</span><span class="t">Saí do emprego e não sei se recebi tudo certo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#rescisao-indireta"><span class="n">04</span><span class="t">A empresa não deposita meu FGTS ou atrasa meu salário.</span><span class="arrow" aria-hidden="true">→</span></a></li>
         <li><a href="#negado"><span class="n">05</span><span class="t">Meu pedido no INSS foi negado e eu não entendi o motivo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#outras" data-open-tab="tab-3"><span class="n">06</span><span class="t">Me acidentei ou adoeci por causa do trabalho.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#auxilio-doenca"><span class="n">06</span><span class="t">Estou doente e não consigo trabalhar.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#aposentadoria-rural"><span class="n">07</span><span class="t">Trabalho na roça e quero saber da minha aposentadoria.</span><span class="arrow" aria-hidden="true">→</span></a></li>
       </ul>
     </div>
     <figure class="photo reveal" data-label="Foto: detalhe editorial · mãos, documentos, tons quentes">
@@ -432,34 +424,57 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ============ 6. ÁREAS PRINCIPAIS ============ -->
+<!-- ============ 6. SITUAÇÕES (PROBLEMA → SOLUÇÃO) ============ -->
 <div class="services" id="areas">
 
   <article class="service bg-wine" id="maternidade" aria-labelledby="s1">
     <div class="body">
-      <span class="tag">Serviço 01 · Previdenciário</span>
-      <h2 class="display h-md reveal" id="s1">A maternidade <em>também</em> é um direito</h2>
-      <p class="reveal">O salário-maternidade é pago pelo INSS durante o afastamento por parto, adoção ou guarda para adoção.</p>
-      <p class="reveal">Muitas mães nem sabem que podem ter direito, e acabam deixando de pedir.</p>
-      <p class="small">Pode ser o seu caso se você:</p>
+      <span class="tag">Situação 01 · Salário-maternidade</span>
+      <h2 class="display h-md reveal" id="s1">Grávida? <em>Uma única</em> contribuição pode bastar</h2>
+      <p class="reveal">Até 2024, autônomas, MEIs e quem pagava o INSS por conta própria precisavam de 10 contribuições para receber o salário-maternidade.</p>
+      <p class="reveal">O STF derrubou essa exigência. Hoje, com uma contribuição feita antes do parto, você já pode ter direito ao benefício.</p>
+      <p class="small">Quem pode ter direito:</p>
       <ul class="checks">
-        <li>tem carteira assinada, é autônoma, MEI ou contribui por conta própria;</li>
-        <li>ficou desempregada há pouco tempo;</li>
-        <li>trabalha no campo, mesmo sem carteira assinada;</li>
-        <li>já pediu e o INSS negou.</li>
+        <li>quem tem carteira assinada ou é empregada doméstica;</li>
+        <li>autônoma, MEI ou quem contribui por conta própria (inclusive dona de casa);</li>
+        <li>quem ficou desempregada há pouco tempo;</li>
+        <li>quem trabalha no campo, mesmo sem carteira assinada.</li>
       </ul>
-      <a class="btn btn--light" data-wa="Olá, Diovana! Gostaria de verificar meu direito ao salário-maternidade." href="#contato" target="_blank" rel="noopener">Quero verificar meu direito</a>
+      <p class="note">Teve o pedido negado por falta de contribuições? Ele pode ser analisado de novo.</p>
+      <a class="btn btn--light" data-wa="Olá, Diovana! Estou grávida (ou tive bebê) e gostaria de verificar meu direito ao salário-maternidade." href="#contato" target="_blank" rel="noopener">Quero verificar meu salário-maternidade</a>
     </div>
-    <figure class="photo" data-label="Foto: maternidade · P&amp;B, delicada">
+    <figure class="photo">
       <img src="img/maternidade.jpg" alt="Diovana Carvalho sorrindo, sentada no escritório com livros de Direito Previdenciário" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
-  <article class="service bg-black reverse" id="rescisao" aria-labelledby="s2">
+  <article class="service bg-black reverse" id="bpc" aria-labelledby="s2">
     <div class="body">
-      <span class="tag">Serviço 02 · Trabalhista</span>
-      <h2 class="display h-md reveal" id="s2">Saiu da empresa? <em>Confira</em> o que é seu</h2>
-      <p class="reveal">Na hora da demissão, é comum assinar tudo com pressa. Depois vêm as dúvidas: as contas estavam certas? Faltou alguma coisa?</p>
+      <span class="tag">Situação 02 · BPC/LOAS</span>
+      <h2 class="display h-md reveal" id="s2">Um salário mínimo por mês, <em>mesmo sem</em> nunca ter contribuído</h2>
+      <p class="reveal">O BPC/LOAS é um benefício da assistência social, pago pelo INSS. Para receber, a pessoa não precisa ter contribuído nenhuma vez.</p>
+      <p class="reveal">LOAS é a Lei Orgânica da Assistência Social, a lei que criou o benefício.</p>
+      <p class="small">Quem pode ter direito:</p>
+      <ul class="checks">
+        <li>idosos a partir de 65 anos;</li>
+        <li>pessoas com deficiência de qualquer idade, inclusive crianças;</li>
+        <li>desde que a família tenha renda baixa: em regra, até 1/4 do salário mínimo por pessoa, mas gastos com saúde e outros fatores também podem ser considerados;</li>
+        <li>com o Cadastro Único (CadÚnico) atualizado.</li>
+      </ul>
+      <p class="note">O BPC não paga 13º e não deixa pensão. Por isso, vale analisar antes se existe outro benefício possível.</p>
+      <a class="btn" data-wa="Olá, Diovana! Gostaria de saber se minha família pode ter direito ao BPC/LOAS." href="#contato" target="_blank" rel="noopener">Quero saber sobre o BPC</a>
+    </div>
+    <figure class="photo">
+      <img src="img/bpc.jpg" alt="Diovana Carvalho lendo um documento com atenção" loading="lazy" onerror="this.remove()">
+    </figure>
+  </article>
+
+  <article class="service bg-paper" id="rescisao" aria-labelledby="s3">
+    <div class="body">
+      <span class="tag">Situação 03 · Trabalhista</span>
+      <h2 class="display h-md reveal" id="s3">Saiu do emprego? <em>Confira</em> se as contas fecham</h2>
+      <p class="reveal">Na hora da demissão, é comum assinar tudo com pressa. Depois vem a dúvida: estava tudo certo?</p>
+      <p class="reveal">Eu confiro o termo de rescisão, os contracheques e o extrato do FGTS para ver se algo ficou para trás.</p>
       <p class="small">Vale conferir:</p>
       <ul class="checks">
         <li>saldo de salário, férias e 13º proporcionais;</li>
@@ -467,58 +482,40 @@ section{position:relative}
         <li>FGTS e a multa de 40%, na demissão sem justa causa;</li>
         <li>horas extras e adicionais que nunca foram pagos.</li>
       </ul>
-      <p class="note">Os direitos trabalhistas têm prazo para serem cobrados. Se você saiu há pouco tempo, vale olhar com atenção.</p>
-      <a class="btn" data-wa="Olá, Diovana! Fui desligado(a) e gostaria de conferir minha rescisão." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
+      <p class="note">Você tem até 2 anos depois de sair da empresa para buscar esses direitos na Justiça.</p>
+      <a class="btn" data-wa="Olá, Diovana! Saí do emprego e gostaria de conferir se minha rescisão está correta." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
     </div>
-    <figure class="photo" data-label="Foto: ambiente de trabalho · tons escuros">
+    <figure class="photo">
       <img src="img/rescisao.jpg" alt="Diovana Carvalho com a CLT aberta nas mãos" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
-  <article class="service bg-paper" id="bpc" aria-labelledby="s3">
+  <article class="service bg-wine reverse" id="rescisao-indireta" aria-labelledby="s4">
     <div class="body">
-      <span class="tag">Serviço 03 · Previdenciário</span>
-      <h2 class="display h-md reveal" id="s3">Cuidar de quem precisa <em>não deveria</em> pesar sozinho</h2>
-      <p class="reveal">O BPC/LOAS é um benefício mensal da assistência social, pago pelo INSS. Para ter direito, a pessoa não precisa ter contribuído.</p>
-      <p class="small">Pode ter direito:</p>
+      <span class="tag">Situação 04 · Rescisão indireta</span>
+      <h2 class="display h-md reveal" id="s4">A empresa <em>não deposita</em> seu FGTS?</h2>
+      <p class="reveal">Quando quem descumpre o contrato é a empresa, o trabalhador pode pedir a rescisão indireta. Funciona como uma “justa causa do empregador”.</p>
+      <p class="reveal">Em 2025, o TST (Tribunal Superior do Trabalho) firmou o entendimento de que FGTS não depositado ou depositado de forma irregular já é motivo suficiente.</p>
+      <p class="small">Outros motivos comuns:</p>
       <ul class="checks">
-        <li>quem tem 65 anos ou mais;</li>
-        <li>pessoa com deficiência de qualquer idade, inclusive crianças;</li>
-        <li>desde que a renda da família esteja dentro dos critérios da lei.</li>
+        <li>salário atrasado com frequência;</li>
+        <li>assédio ou tratamento humilhante;</li>
+        <li>exigência de tarefas fora do combinado ou perigosas.</li>
       </ul>
-      <p class="note muted">LOAS é a Lei Orgânica da Assistência Social, a lei que criou o benefício.</p>
-      <a class="btn" data-wa="Olá, Diovana! Gostaria de saber se minha família pode ter direito ao BPC/LOAS." href="#contato" target="_blank" rel="noopener">Quero saber sobre o BPC</a>
+      <p class="note">Na rescisão indireta, você sai com os direitos de quem é demitido sem justa causa: aviso prévio, multa de 40%, saque do FGTS e seguro-desemprego. Antes de pedir demissão, busque orientação.</p>
+      <a class="btn btn--light" data-wa="Olá, Diovana! A empresa não está depositando meu FGTS (ou atrasa meu salário) e gostaria de saber sobre a rescisão indireta." href="#contato" target="_blank" rel="noopener">Quero saber se é o meu caso</a>
     </div>
-    <figure class="photo" data-label="Foto: família / pessoa idosa · tons quentes">
-      <img src="img/bpc.jpg" alt="Diovana Carvalho lendo um documento com atenção" loading="lazy" onerror="this.remove()">
-    </figure>
-  </article>
-
-  <article class="service bg-wine reverse" id="auxilio-doenca" aria-labelledby="s4">
-    <div class="body">
-      <span class="tag">Serviço 04 · Previdenciário</span>
-      <h2 class="display h-md reveal" id="s4">Quando a saúde para, <em>a renda</em> não precisa parar</h2>
-      <p class="reveal">Hoje o nome oficial é “benefício por incapacidade temporária”, mas todo mundo conhece como auxílio-doença.</p>
-      <p class="reveal">Ele existe para quem precisa se afastar do trabalho por mais de 15 dias por doença ou acidente.</p>
-      <p class="small">Pode ser o seu caso se:</p>
-      <ul class="checks">
-        <li>a perícia negou, mesmo com laudo médico;</li>
-        <li>o benefício foi cortado antes de você se recuperar;</li>
-        <li>você não sabe se tem contribuições suficientes.</li>
-      </ul>
-      <a class="btn btn--light" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
-    </div>
-    <figure class="photo" data-label="Foto: retrato sereno · P&amp;B">
-      <img src="img/auxilio-doenca.jpg" alt="Diovana Carvalho no escritório, segurando uma xícara de café" loading="lazy" onerror="this.remove()">
+    <figure class="photo">
+      <img src="img/rescisao-indireta.jpg" alt="Diovana Carvalho de braços cruzados, encostada na mesa do escritório" loading="lazy" onerror="this.remove()">
     </figure>
   </article>
 
   <article class="service bg-black" id="negado" aria-labelledby="s5">
     <div class="body">
-      <span class="tag">Serviço 05 · Previdenciário</span>
+      <span class="tag">Situação 05 · INSS</span>
       <h2 class="display h-md reveal" id="s5">Um “não” do INSS <em>pode ser</em> revisto</h2>
       <p class="reveal">Muitos pedidos são negados por falta de um documento, um erro no cadastro ou uma perícia rápida demais.</p>
-      <p class="reveal">Entender o motivo da negativa é o primeiro passo.</p>
+      <p class="reveal">Entender o motivo da negativa é o primeiro passo. Ele está na carta de indeferimento, que fica disponível no Meu INSS.</p>
       <p class="small">Caminhos possíveis:</p>
       <ul class="checks">
         <li>recurso no próprio INSS;</li>
@@ -528,9 +525,90 @@ section{position:relative}
       <p class="note">Cada negativa é analisada individualmente. Não existe resposta igual para todo mundo.</p>
       <a class="btn" data-wa="Olá, Diovana! Meu benefício foi negado pelo INSS e gostaria de entender o que pode ser feito." href="#contato" target="_blank" rel="noopener">Quero entender a negativa</a>
     </div>
-    <figure class="photo" data-label="Foto: Diovana analisando documentos · tons escuros">
+    <figure class="photo">
       <img src="img/negado.jpg" alt="Diovana Carvalho à mesa, analisando documentos" loading="lazy" onerror="this.remove()">
     </figure>
+  </article>
+
+  <article class="service bg-paper reverse" id="auxilio-doenca" aria-labelledby="s6">
+    <div class="body">
+      <span class="tag">Situação 06 · Auxílio-doença</span>
+      <h2 class="display h-md reveal" id="s6">Doente e sem conseguir trabalhar? <em>Veja se</em> tem direito</h2>
+      <p class="reveal">Hoje o nome oficial é “benefício por incapacidade temporária”, mas todo mundo conhece como auxílio-doença.</p>
+      <p class="reveal">Ele é pago a quem fica sem condições de trabalhar por mais de 15 dias por causa de doença ou acidente.</p>
+      <p class="small">Quem pode ter direito:</p>
+      <ul class="checks">
+        <li>quem tem carteira assinada, é autônomo, MEI ou contribui por conta própria;</li>
+        <li>em regra, com pelo menos 12 contribuições ao INSS;</li>
+        <li>sem essa exigência em caso de acidente ou de algumas doenças graves previstas em lei;</li>
+        <li>com laudos e exames que mostrem a incapacidade.</li>
+      </ul>
+      <p class="note">A perícia negou mesmo com laudo? Ou o benefício foi cortado antes de você se recuperar? Isso também pode ser analisado.</p>
+      <a class="btn" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
+    </div>
+    <figure class="photo">
+      <img src="img/auxilio-doenca.jpg" alt="Diovana Carvalho no escritório, segurando uma xícara de café" loading="lazy" onerror="this.remove()">
+    </figure>
+  </article>
+
+  <article class="service solo bg-wine" id="auxilio-doenca-rural" aria-labelledby="s7">
+    <div class="body">
+      <div class="solo-a">
+      <span class="tag">Situação 07 · Rural</span>
+      <h2 class="display h-md reveal" id="s7">Trabalha na roça? <em>Você também</em> pode se afastar pelo INSS</h2>
+      <p class="reveal">Quem trabalha no campo com a família, como agricultor ou pescador artesanal, é chamado de segurado especial.</p>
+      <p class="reveal">Pode ter direito ao auxílio-doença mesmo sem pagar o INSS mês a mês, desde que comprove o trabalho rural nos 12 meses antes de adoecer.</p>
+      </div>
+      <div class="solo-b">
+      <p class="small">Documentos que ajudam a comprovar:</p>
+      <ul class="checks">
+        <li>bloco de notas do produtor rural e notas de venda;</li>
+        <li>contrato de arrendamento ou parceria;</li>
+        <li>cadastro no sindicato rural, ITR ou CAF (antiga DAP);</li>
+        <li>documentos antigos em que conste “lavrador” ou “agricultor”.</li>
+      </ul>
+      <a class="btn btn--light" data-wa="Olá, Diovana! Trabalho na roça e gostaria de saber sobre o auxílio-doença rural." href="#contato" target="_blank" rel="noopener">Quero orientação sobre auxílio rural</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="service bg-black" id="aposentadoria-rural" aria-labelledby="s8">
+    <div class="body">
+      <span class="tag">Situação 08 · Aposentadoria rural</span>
+      <h2 class="display h-md reveal" id="s8">Aposentadoria rural: <em>quem tem</em> direito</h2>
+      <p class="reveal">Quem dedicou a vida ao trabalho no campo pode se aposentar mais cedo e, no caso do segurado especial, sem ter pago o INSS. O que conta é comprovar o trabalho rural.</p>
+      <p class="small">Os requisitos:</p>
+      <ul class="checks">
+        <li>mulheres a partir de 55 anos e homens a partir de 60;</li>
+        <li>15 anos de trabalho rural comprovado;</li>
+        <li>no regime de economia familiar, não é preciso ter contribuído.</li>
+      </ul>
+      <p class="note">Tem tempo de trabalho na cidade e no campo? Os dois podem ser somados na aposentadoria híbrida, que segue a idade urbana: 62 anos para mulheres e 65 para homens.</p>
+      <a class="btn" data-wa="Olá, Diovana! Trabalho (ou trabalhei) na roça e gostaria de saber sobre a aposentadoria rural." href="#contato" target="_blank" rel="noopener">Quero saber da minha aposentadoria</a>
+    </div>
+    <figure class="photo">
+      <img src="img/aposentadoria-rural.jpg" alt="Diovana Carvalho à mesa, com as mãos entrelaçadas, em escuta atenta" loading="lazy" onerror="this.remove()">
+    </figure>
+  </article>
+
+  <article class="service solo bg-paper" id="orientacao" aria-labelledby="s9">
+    <div class="body">
+      <div class="solo-a">
+      <span class="tag">Situação 09 · Por que buscar orientação</span>
+      <h2 class="display h-md reveal" id="s9">Orientação <em>desde o início</em> evita perder tempo e dinheiro</h2>
+      <p class="reveal">Um pedido feito sem os documentos certos pode ser negado, e cada negativa significa meses de espera.</p>
+      <p class="reveal">Uma rescisão assinada sem conferir pode deixar valores para trás. E alguns direitos têm prazo.</p>
+      </div>
+      <div class="solo-b">
+      <p class="small">Com uma advogada que atua todos os dias com Direito Previdenciário e Trabalhista:</p>
+      <ul class="checks">
+        <li>o pedido é feito do jeito certo, com a documentação completa;</li>
+        <li>os prazos são acompanhados de perto;</li>
+        <li>você entende cada opção antes de decidir.</li>
+      </ul>
+      <a class="btn" data-wa="Olá, Diovana! Gostaria de uma orientação sobre o meu caso antes de dar qualquer passo." href="#contato" target="_blank" rel="noopener">Quero uma orientação</a>
+      </div>
+    </div>
   </article>
 
 </div>
@@ -548,61 +626,52 @@ section{position:relative}
 
     <div class="tabs" role="list">
       <div class="tab open" role="listitem" id="tab-1">
-        <button class="tab-btn" aria-expanded="true" aria-controls="p1"><span class="tab-num">01</span><span class="tab-title">Rescisão indireta</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <button class="tab-btn" aria-expanded="true" aria-controls="p1"><span class="tab-num">01</span><span class="tab-title">Auxílio-acidente</span><span class="tab-icon" aria-hidden="true"></span></button>
         <div class="tab-panel" id="p1">
-          <h3>Rescisão indireta</h3>
-          <p>É quando quem descumpre o contrato é a empresa: salário atrasado, FGTS sem depósito, assédio, exigências abusivas.</p>
-          <p>Nesses casos, o trabalhador pode pedir o fim do contrato com os mesmos direitos de quem é demitido sem justa causa.</p>
-          <a class="link" data-wa="Olá, Diovana! Acho que posso estar em uma situação de rescisão indireta e gostaria de uma orientação." href="#contato" target="_blank" rel="noopener">Quero saber se é o meu caso →</a>
-        </div>
-      </div>
-      <div class="tab" role="listitem" id="tab-2">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p2"><span class="tab-num">02</span><span class="tab-title">Auxílio-acidente</span><span class="tab-icon" aria-hidden="true"></span></button>
-        <div class="tab-panel" id="p2">
           <h3>Auxílio-acidente</h3>
           <p>Uma indenização mensal do INSS para quem ficou com uma sequela permanente depois de um acidente, de trabalho ou não, e passou a ter mais dificuldade para trabalhar.</p>
           <p>Ele pode ser recebido junto com o salário. Nem todo segurado tem acesso, e a análise mostra se é o seu caso.</p>
           <a class="link" data-wa="Olá, Diovana! Sofri um acidente e fiquei com sequela. Gostaria de saber sobre o auxílio-acidente." href="#contato" target="_blank" rel="noopener">Quero entender o auxílio-acidente →</a>
         </div>
       </div>
-      <div class="tab" role="listitem" id="tab-3">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p3"><span class="tab-num">03</span><span class="tab-title">Doenças ocupacionais</span><span class="tab-icon" aria-hidden="true"></span></button>
-        <div class="tab-panel" id="p3">
+      <div class="tab" role="listitem" id="tab-2">
+        <button class="tab-btn" aria-expanded="false" aria-controls="p2"><span class="tab-num">02</span><span class="tab-title">Doenças ocupacionais</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <div class="tab-panel" id="p2">
           <h3>Doenças ocupacionais</h3>
           <p>LER/DORT, problemas de coluna, perda auditiva, esgotamento mental. Quando a doença tem relação com o trabalho, isso pode gerar direitos no INSS e também em relação à empresa.</p>
           <p>Um exemplo é a estabilidade: em alguns casos, a pessoa não pode ser demitida por 12 meses depois que volta ao trabalho.</p>
           <a class="link" data-wa="Olá, Diovana! Acredito que minha doença tem relação com o trabalho e gostaria de uma orientação." href="#contato" target="_blank" rel="noopener">Quero uma orientação →</a>
         </div>
       </div>
-      <div class="tab" role="listitem" id="tab-4">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p4"><span class="tab-num">04</span><span class="tab-title">Pensão por morte</span><span class="tab-icon" aria-hidden="true"></span></button>
-        <div class="tab-panel" id="p4">
+      <div class="tab" role="listitem" id="tab-3">
+        <button class="tab-btn" aria-expanded="false" aria-controls="p3"><span class="tab-num">03</span><span class="tab-title">Pensão por morte</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <div class="tab-panel" id="p3">
           <h3>Pensão por morte</h3>
           <p>Benefício para a família de quem faleceu sendo segurado do INSS ou aposentado.</p>
           <p>Cônjuge, companheiro(a) e filhos podem ter direito, inclusive em união estável sem papel passado, quando ela pode ser comprovada.</p>
           <a class="link" data-wa="Olá, Diovana! Perdi um familiar e gostaria de entender sobre a pensão por morte." href="#contato" target="_blank" rel="noopener">Quero entender a pensão →</a>
         </div>
       </div>
-      <div class="tab" role="listitem" id="tab-5">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p5"><span class="tab-num">05</span><span class="tab-title">Outras questões trabalhistas</span><span class="tab-icon" aria-hidden="true"></span></button>
-        <div class="tab-panel" id="p5">
+      <div class="tab" role="listitem" id="tab-4">
+        <button class="tab-btn" aria-expanded="false" aria-controls="p4"><span class="tab-num">04</span><span class="tab-title">Outras questões trabalhistas</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <div class="tab-panel" id="p4">
           <h3>Outras questões trabalhistas</h3>
           <p>Horas extras não pagas, adicional de insalubridade ou periculosidade, desvio de função, trabalho sem carteira assinada, assédio moral.</p>
           <p>Se algo no seu trabalho não parece certo, vale conversar.</p>
           <a class="link" data-wa="Olá, Diovana! Tenho uma dúvida trabalhista e gostaria de uma orientação." href="#contato" target="_blank" rel="noopener">Quero tirar minha dúvida →</a>
         </div>
       </div>
-      <div class="tab" role="listitem" id="tab-6">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p6"><span class="tab-num">06</span><span class="tab-title">Contratos bancários</span><span class="tab-icon" aria-hidden="true"></span></button>
-        <div class="tab-panel" id="p6">
+      <div class="tab" role="listitem" id="tab-5">
+        <button class="tab-btn" aria-expanded="false" aria-controls="p5"><span class="tab-num">05</span><span class="tab-title">Contratos bancários</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <div class="tab-panel" id="p5">
           <h3>Contratos bancários</h3>
           <p>Descontos que você não reconhece no benefício ou no salário, empréstimo consignado que você não contratou, cobranças e juros fora do combinado.</p>
           <a class="link" data-wa="Olá, Diovana! Estou com descontos ou cobranças do banco que não reconheço e gostaria de uma análise." href="#contato" target="_blank" rel="noopener">Quero analisar meu contrato →</a>
         </div>
       </div>
-      <div class="tab" role="listitem" id="tab-7">
-        <button class="tab-btn" aria-expanded="false" aria-controls="p7"><span class="tab-num">07</span><span class="tab-title">Direito Civil</span><span class="tab-icon" aria-hidden="true"></span></button>
-        <div class="tab-panel" id="p7">
+      <div class="tab" role="listitem" id="tab-6">
+        <button class="tab-btn" aria-expanded="false" aria-controls="p6"><span class="tab-num">06</span><span class="tab-title">Direito Civil</span><span class="tab-icon" aria-hidden="true"></span></button>
+        <div class="tab-panel" id="p6">
           <h3>Direito Civil</h3>
           <p>Contratos, cobranças, indenizações e outras questões do dia a dia que pedem orientação jurídica.</p>
           <a class="link" data-wa="Olá, Diovana! Tenho uma questão na área cível e gostaria de uma orientação." href="#contato" target="_blank" rel="noopener">Quero uma orientação →</a>
@@ -629,7 +698,25 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ============ 9. SOBRE ============ -->
+<!-- ============ 9. MANIFESTO ============ -->
+<section class="bg-black manifesto" aria-labelledby="manifesto-title">
+  <div class="wrap">
+    <p class="eyebrow center" style="text-align:center">Manifesto</p>
+    <h2 class="display h-lg center reveal" id="manifesto-title" style="text-align:center;max-width:14ch">Por que buscar <em>orientação?</em></h2>
+    <div class="text center reveal" style="text-align:center">
+      <p>Ninguém procura uma advogada em um dia comum.</p>
+      <p>Às vezes é um bebê que chegou e um benefício que não veio. Uma demissão sem explicação. Um laudo que o INSS não aceitou.</p>
+      <p>Orientação jurídica serve para isso: transformar dúvida em informação e informação em uma decisão segura.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><span class="n">01</span><h3>Atendimento individualizado</h3><p>Cada história é ouvida do começo. Sem resposta pronta.</p></div>
+      <div class="pillar reveal"><span class="n">02</span><h3>Linguagem clara</h3><p>Você entende cada passo, sem juridiquês.</p></div>
+      <div class="pillar reveal"><span class="n">03</span><h3>Presencial e online</h3><p>No escritório em Santo Antônio da Patrulha ou pelo WhatsApp, de onde você estiver.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. SOBRE ============ -->
 <section class="about" id="sobre" aria-labelledby="sobre-title">
   <figure class="photo" data-label="Foto: retrato de Diovana · P&amp;B, vertical">
     <img src="img/sobre-diovana.jpg" alt="Retrato da advogada Diovana Carvalho com livros de Direito Previdenciário e do Trabalho" loading="lazy" onerror="this.remove()">
