@@ -387,6 +387,47 @@ section{position:relative}
   .marquee-track span[aria-hidden]{display:none}
   .photo:hover img{transform:none}
 }
+
+/* ================= CLEAN: claro, bordô só em detalhes ================= */
+:root{--black:#1C1818;--muted-dark:#5E5752;--line-light:rgba(28,24,24,.12);--line-dark:rgba(28,24,24,.12)}
+body{color:var(--black)}
+.header,.header.scrolled{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line-light);backdrop-filter:blur(8px)}
+.nav a{color:var(--black)}
+.menu-btn{color:var(--black)}
+.mobile-nav{background:var(--cream)}.mobile-nav a,.mobile-nav .close{color:var(--black)}
+.hero{background:var(--cream);color:var(--black)}
+.hero::before{display:none}
+.hero::after{background:linear-gradient(0deg,var(--cream) 0%,var(--cream) 50%,rgba(240,225,206,.7) 60%,rgba(240,225,206,0) 72%)}
+.hero-inner,.closing .wrap{text-shadow:none}
+.hero h1.eyebrow{color:var(--accent)}
+.hero .lead,.closing .lead{color:var(--muted-dark)}
+.hero .display em,.closing .display em{color:var(--accent)}
+.hero .link{color:var(--black)}
+.closing{background:var(--cream);color:var(--black)}
+.closing::after{background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.92) 50%,rgba(240,225,206,.4) 100%)}
+.closing .eyebrow{color:var(--accent)!important}
+@media (min-width:960px){
+  .hero{background:var(--cream)}
+  .hero::after{background:linear-gradient(90deg,var(--cream) 0%,var(--cream) 38%,rgba(240,225,206,.6) 46%,rgba(240,225,206,0) 60%)}
+  .closing::after{background:linear-gradient(90deg,var(--cream) 0%,rgba(240,225,206,.9) 34%,rgba(240,225,206,.3) 55%,rgba(240,225,206,0) 66%)}
+}
+.marquee{border-color:transparent}
+.about .body.bg-cream p{color:var(--black)}
+.about .body.bg-cream .eyebrow,.about .oab{color:var(--accent)}
+.about .quote{color:var(--accent)}
+.about .signature{color:var(--accent)}
+.monogram{opacity:.07}
+.footer{background:#fff;color:var(--black);border-top:1px solid var(--line-light)}
+.footer .muted,.footer .legal{color:var(--muted-dark)}
+.footer .eyebrow{color:var(--accent)}
+.footer a{border-color:var(--line-light)}.footer a:hover{border-color:var(--accent)}
+.footer .legal{border-color:var(--line-light)}
+.sit .photo{background:linear-gradient(160deg,#F3EBE1 0%,#E4D6C6 100%)}
+.sit .photo::after{color:rgba(28,24,24,.55)}
+.sit.bg-white .photo{background:linear-gradient(160deg,#F6EFE6 0%,#EADDCD 100%)}
+.bg-white .eyebrow,.bg-cream .eyebrow{color:var(--accent)}
+.bg-white .display em,.bg-cream .display em{color:var(--accent)}
+.service .checks li::before{color:var(--accent)}
 </style>
 </head>
 <body class="no-js">
@@ -395,8 +436,8 @@ section{position:relative}
 <!-- ============ 1. HEADER ============ -->
 <header class="header" id="topo">
   <a href="#topo" class="logo" aria-label="Diovana Carvalho Advocacia — início">
-    <img class="logo-mark" src="img/logo-dc-creme.png" alt="" width="57" height="40">
-    <img class="logo-name" src="img/logo-nome-creme.png" alt="Diovana Carvalho Advocacia" width="183" height="12">
+    <img class="logo-mark" src="img/logo-dc-bordo.png" alt="" width="57" height="40">
+    <img class="logo-name" src="img/logo-nome-bordo.png" alt="Diovana Carvalho Advocacia" width="183" height="12">
   </a>
   <nav class="nav" aria-label="Principal">
     <a href="#areas">Áreas</a>
@@ -495,18 +536,18 @@ section{position:relative}
     </div>
   </section>
 
-<section class="sit bg-wine photo-left" id="rescisao" aria-labelledby="t-rescisao">
+<section class="sit bg-white photo-left" id="rescisao" aria-labelledby="t-rescisao">
     <figure class="photo" data-label="Imagem: trabalhador com documentos da rescisão"><img src="img/sit-rescisao.jpg" alt="Trabalhador conferindo documentos da rescisão" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão</p>
       <h2 class="display h-lg reveal" id="t-rescisao">Saiu do emprego? <em>Confira</em> o que é seu</h2>
       <p class="sit-text reveal">Férias, 13º, aviso prévio, FGTS e multa de 40%. Eu confiro se veio tudo certo.</p>
       <p class="sit-note">Prazo: até 2 anos depois de sair da empresa.</p>
-      <a class="btn btn--light" data-wa="Olá, Diovana! Saí do emprego e gostaria de conferir se minha rescisão está correta." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
+      <a class="btn" data-wa="Olá, Diovana! Saí do emprego e gostaria de conferir se minha rescisão está correta." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
     </div>
   </section>
 
-<section class="sit bg-white photo-right" id="rescisao-indireta" aria-labelledby="t-rescisao-indireta">
+<section class="sit bg-cream photo-right" id="rescisao-indireta" aria-labelledby="t-rescisao-indireta">
     <figure class="photo" data-label="Imagem: trabalhador preocupado / extrato do FGTS"><img src="img/sit-rescisao-indireta.jpg" alt="Trabalhador conferindo o extrato do FGTS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão indireta</p>
@@ -518,7 +559,7 @@ section{position:relative}
     </div>
   </section>
 
-<section class="sit bg-cream photo-left" id="negado" aria-labelledby="t-negado">
+<section class="sit bg-white photo-left" id="negado" aria-labelledby="t-negado">
     <figure class="photo" data-label="Imagem: carta do INSS / pessoa lendo documento"><img src="img/sit-negado.jpg" alt="Pessoa lendo uma carta do INSS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Benefício negado</p>
@@ -528,13 +569,13 @@ section{position:relative}
     </div>
   </section>
 
-<section class="sit bg-wine photo-right" id="auxilio-doenca" aria-labelledby="t-auxilio-doenca">
+<section class="sit bg-cream photo-right" id="auxilio-doenca" aria-labelledby="t-auxilio-doenca">
     <figure class="photo" data-label="Imagem: pessoa em recuperação / atestado médico"><img src="img/sit-auxilio-doenca.jpg" alt="Pessoa em recuperação, em casa" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Auxílio-doença</p>
       <h2 class="display h-lg reveal" id="t-auxilio-doenca">Doente e sem poder trabalhar? <em>Veja se</em> tem direito</h2>
       <p class="sit-text reveal">Para quem precisa se afastar por mais de 15 dias. Em regra, com 12 contribuições, e sem essa exigência em caso de acidente.</p>
-      <a class="btn btn--light" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
+      <a class="btn" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
     </div>
   </section>
 
@@ -668,8 +709,8 @@ section{position:relative}
   <figure class="photo" data-label="Foto: retrato de Diovana · P&amp;B, vertical">
     <img src="img/sobre-diovana.jpg" alt="Retrato da advogada Diovana Carvalho com livros de Direito Previdenciário e do Trabalho" loading="lazy" onerror="this.remove()">
   </figure>
-  <div class="body bg-wine">
-    <img class="monogram" src="img/logo-dc-creme.png" alt="" aria-hidden="true" loading="lazy">
+  <div class="body bg-cream">
+    <img class="monogram" src="img/logo-dc-bordo.png" alt="" aria-hidden="true" loading="lazy">
     <p class="eyebrow">Sobre</p>
     <p class="quote reveal">Por trás de cada direito, existe uma história que merece ser ouvida.</p>
     <h2 class="display h-md" id="sobre-title" style="font-size:clamp(1.6rem,3.5vw,2.2rem);letter-spacing:.08em">Diovana Carvalho</h2>
@@ -725,7 +766,7 @@ section{position:relative}
     <img src="img/encerramento.jpg" alt="" loading="lazy" onerror="this.remove()">
   </figure>
   <div class="wrap"><div class="closing-panel">
-    <p class="eyebrow" style="color:#D9C6B0">Análise do seu caso</p>
+    <p class="eyebrow">Análise do seu caso</p>
     <h2 class="display h-xl reveal" id="closing-title">O primeiro passo <em>é uma conversa</em></h2>
     <p class="lead reveal">Conte o que está acontecendo. A partir daí, você vai entender quais são seus direitos e quais caminhos existem.</p>
     <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Quero conversar sobre meu caso</a>
@@ -739,7 +780,7 @@ section{position:relative}
   <div class="footer-grid">
     <div>
       <h2 class="sr-only">Diovana Carvalho</h2>
-      <img src="img/logo-completo-creme.png" alt="Diovana Carvalho — Advocacia Previdenciária e Trabalhista" width="240" height="162" loading="lazy" style="margin-bottom:1.4rem">
+      <img src="img/logo-completo-bordo.png" alt="Diovana Carvalho — Advocacia Previdenciária e Trabalhista" width="240" height="162" loading="lazy" style="margin-bottom:1.4rem">
       <p class="muted" style="margin-bottom:.4rem">Advogada · OAB/RS [000.000]</p>
       <p class="muted">Direito Previdenciário, Trabalhista e Cível</p>
     </div>
