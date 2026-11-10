@@ -428,6 +428,19 @@ body{color:var(--black)}
 .bg-white .eyebrow,.bg-cream .eyebrow{color:var(--accent)}
 .bg-white .display em,.bg-cream .display em{color:var(--accent)}
 .service .checks li::before{color:var(--accent)}
+
+/* ===== Topo: foto em tela cheia + cabeçalho transparente ===== */
+.header{background:transparent;border-bottom:1px solid transparent;backdrop-filter:none}
+.header.scrolled{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line-light);backdrop-filter:blur(8px)}
+.hero picture{position:absolute;inset:0}
+.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (min-width:960px){
+  .hero{background:#D0C4C1}
+  .hero .photo{left:0}
+  .hero .photo img,.hero picture img{object-position:70% 30%}
+  .hero::after{background:linear-gradient(90deg,rgba(243,238,235,.55) 0%,rgba(243,238,235,.25) 35%,rgba(243,238,235,0) 50%)}
+  .hero{align-items:center}
+}
 </style>
 </head>
 <body class="no-js">
@@ -467,7 +480,7 @@ body{color:var(--black)}
 <!-- ============ 2. HERO ============ -->
 <section class="hero" aria-labelledby="hero-title">
   <figure class="photo" data-label="Foto: Diovana · editorial P&amp;B, tela cheia">
-    <img src="img/hero.jpg" alt="Diovana Carvalho, advogada em Santo Antônio da Patrulha, sentada e sorrindo" fetchpriority="high" onerror="this.remove()">
+    <picture><source media="(min-width:960px)" srcset="img/hero-wide.jpg"><img src="img/hero.jpg" alt="Diovana Carvalho, advogada em Santo Antônio da Patrulha, sentada e sorrindo" fetchpriority="high" onerror="this.remove()"></picture>
   </figure>
   <div class="hero-inner">
     <h1 class="eyebrow" id="hero-title">Advocacia Previdenciária e Trabalhista · Santo Antônio da Patrulha/RS</h1>
