@@ -441,6 +441,15 @@ body{color:var(--black)}
   .hero::after{background:linear-gradient(90deg,rgba(243,238,235,.55) 0%,rgba(243,238,235,.25) 35%,rgba(243,238,235,0) 50%)}
   .hero{align-items:center}
 }
+
+/* título do topo em 2 linhas */
+.hero .hero-title{max-width:none}
+@media (min-width:960px){
+  .hero .hero-title{font-size:clamp(3rem,4.4vw,5.6rem);white-space:nowrap;line-height:1.02}
+  .hero .hero-inner{max-width:none}
+  .hero::after{background:linear-gradient(90deg,rgba(243,238,235,.7) 0%,rgba(243,238,235,.45) 38%,rgba(243,238,235,0) 58%)}
+}
+@media (max-width:959px){.hero .hero-title{font-size:clamp(2.1rem,9vw,2.8rem)}}
 </style>
 </head>
 <body class="no-js">
@@ -484,7 +493,7 @@ body{color:var(--black)}
   </figure>
   <div class="hero-inner">
     <h1 class="eyebrow" id="hero-title">Advocacia Previdenciária e Trabalhista · Santo Antônio da Patrulha/RS</h1>
-    <p class="display h-xl reveal">Cada história <em>merece ser</em> ouvida</p>
+    <p class="display h-xl reveal hero-title">Cada história<br><em>merece ser</em> ouvida</p>
     <p class="lead reveal">Benefícios do INSS e direitos do trabalhador, explicados com calma e em palavras simples. No escritório ou online, de onde você estiver.</p>
     <div class="hero-ctas reveal">
       <a class="btn" data-wa="Olá, Diovana! Gostaria de pedir uma análise do meu caso." href="#contato" target="_blank" rel="noopener">Quero uma análise do meu caso</a>
