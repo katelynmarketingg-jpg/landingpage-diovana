@@ -514,6 +514,34 @@ body{color:var(--black)}
 @media (prefers-reduced-motion:reduce){.atuacao-list li{opacity:1;transform:none}}
 .sit.bg-cream .photo{background:linear-gradient(160deg,#FBF7F2 0%,#F3EAE0 100%)}
 .sit--own .photo{background:none!important}
+
+/* ===== GRADE ÚNICA: todas as seções alinham nas mesmas duas linhas (esquerda e direita) ===== */
+:root{--pad:clamp(1.5rem,6vw,6rem);--maxw:1200px;--edge:max(var(--pad),calc((100% - var(--maxw)) / 2))}
+
+body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
+.atuacao .wrap>*,.atuacao-grid>*{min-width:0}
+.wrap{max-width:none;padding-left:var(--edge);padding-right:var(--edge)}
+.header{padding-left:var(--edge);padding-right:var(--edge)}
+.hero{padding-left:var(--edge);padding-right:var(--edge)}
+.marquee{padding:0}
+.footer{padding-left:var(--edge);padding-right:var(--edge)}
+.footer-grid,.footer .legal{max-width:none;margin-left:0;margin-right:0}
+.mobile-nav{padding-left:var(--edge);padding-right:var(--edge)}
+/* situações */
+.sit{padding:clamp(3rem,8vw,6rem) var(--edge);column-gap:clamp(2.5rem,6vw,6rem);row-gap:2rem}
+.sit-body{padding:0}
+.sit .photo{margin:0;width:100%;max-width:440px;justify-self:start;align-self:center}
+.sit{align-items:center}
+@media (min-width:960px){
+  .sit{min-height:auto}
+  .sit.photo-left .photo{justify-self:start}
+  .sit.photo-right .photo{justify-self:end}
+  .sit.photo-left .sit-body{justify-self:end;width:100%;max-width:520px}
+  .sit.photo-right .sit-body{justify-self:start;width:100%;max-width:520px}
+}
+/* sobre: foto colada à esquerda (sangria), texto termina na linha da direita */
+@media (min-width:960px){.about .body{padding-right:var(--edge);padding-left:clamp(2.5rem,5vw,5rem)}}
+@media (max-width:959px){.about .body{padding-left:var(--edge);padding-right:var(--edge)}}
 </style>
 </head>
 <body class="no-js">
@@ -899,6 +927,10 @@ document.querySelectorAll(".atuacao-list").forEach(list=>{
   const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");o.unobserve(e.target);}}),{root:list,threshold:.3});
   items.forEach(i=>o.observe(i));
 });
+
+/* largura real da página (sem a barra de rolagem) para alinhar as margens */
+const setVW=()=>document.documentElement.style.setProperty("--vw",document.documentElement.clientWidth+"px");
+setVW(); window.addEventListener("resize",setVW);
 </script>
 </body>
 </html>
