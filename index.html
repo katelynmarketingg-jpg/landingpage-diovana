@@ -412,8 +412,8 @@ body{color:var(--black)}
   .closing::after{background:linear-gradient(90deg,var(--cream) 0%,rgba(240,225,206,.9) 34%,rgba(240,225,206,.3) 55%,rgba(240,225,206,0) 66%)}
 }
 .marquee{border-color:transparent}
-.about .body.bg-cream p{color:var(--black)}
-.about .body.bg-cream .eyebrow,.about .oab{color:var(--accent)}
+.about .body p{color:var(--black)}
+.about .body .eyebrow,.about .oab{color:var(--accent)}
 .about .quote{color:var(--accent)}
 .about .signature{color:var(--accent)}
 .monogram{opacity:.07}
@@ -542,6 +542,9 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 /* sobre: foto colada à esquerda (sangria), texto termina na linha da direita */
 @media (min-width:960px){.about .body{padding-right:var(--edge);padding-left:clamp(2.5rem,5vw,5rem)}}
 @media (max-width:959px){.about .body{padding-left:var(--edge);padding-right:var(--edge)}}
+.manifesto-destaque{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;color:var(--black);margin:2.2rem 0 1rem!important}
+.manifesto-destaque em{color:var(--accent)}
+.manifesto .pillars,.manifesto .pillar{border-color:var(--line-light)}
 </style>
 </head>
 <body class="no-js">
@@ -725,19 +728,10 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
     </div>
   </section>
 
-<section class="sit bg-white photo-right sit--own" id="orientacao" aria-labelledby="t-orientacao">
-    <figure class="photo" data-label="Foto: Diovana"><img src="img/sobre-diovana.jpg" alt="Diovana Carvalho com livros de Direito Previdenciário e do Trabalho" loading="lazy" onerror="this.remove()"></figure>
-    <div class="sit-body">
-      <p class="eyebrow">Por que buscar orientação</p>
-      <h2 class="sit-title reveal" id="t-orientacao">Fazer certo da primeira vez <em>poupa tempo e dinheiro</em></h2>
-      <p class="sit-text reveal">Encaminhar um benefício sozinho pode fazer você perder meses. Com uma advogada ao lado, o pedido já sai do jeito certo.</p>
-      <a class="btn" data-wa="Olá, Dra. Diovana! Gostaria de uma orientação sobre o meu caso antes de dar qualquer passo." href="#contato" target="_blank" rel="noopener">Falar com a Dra. Diovana</a>
-    </div>
-  </section>
 </div>
 
 <!-- ============ 8. COMO FUNCIONA ============ -->
-<section class="bg-cream" id="como-funciona" aria-labelledby="como-title">
+<section class="bg-white" id="como-funciona" aria-labelledby="como-title">
   <div class="wrap">
     <p class="eyebrow">Como funciona</p>
     <h2 class="display h-lg reveal" id="como-title" style="max-width:16ch">Do primeiro contato <em>ao</em> acompanhamento</h2>
@@ -754,11 +748,13 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 </section>
 
 <!-- ============ 9. MANIFESTO ============ -->
-<section class="bg-white manifesto" aria-labelledby="manifesto-title">
+<section class="bg-cream manifesto" aria-labelledby="manifesto-title">
   <div class="wrap">
     <h2 class="display h-lg center reveal" id="manifesto-title" style="text-align:center;max-width:14ch">Por que buscar <em>orientação?</em></h2>
     <div class="text center reveal" style="text-align:center">
       <p>No meio de um momento difícil, ter ao lado alguém que realmente se importa com o seu caso faz toda a diferença.</p>
+      <p class="manifesto-destaque">Fazer certo da primeira vez <em>poupa tempo e dinheiro.</em></p>
+      <p>Encaminhar um benefício sozinho pode fazer você perder meses. Com uma advogada ao lado, o pedido já sai do jeito certo.</p>
     </div>
     <div class="pillars">
       <div class="pillar reveal"><h3 style="margin-top:0">Atendimento individualizado</h3><p>Cada história é ouvida do começo. Sem resposta pronta.</p></div>
@@ -773,7 +769,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   <figure class="photo" data-label="Foto: retrato de Diovana · P&amp;B, vertical">
     <img src="img/orientacao-diovana.jpg" alt="Diovana Carvalho sorrindo, sentada em um jardim" loading="lazy" onerror="this.remove()">
   </figure>
-  <div class="body bg-cream">
+  <div class="body bg-white">
     <img class="monogram" src="img/logo-dc-bordo.png" alt="" aria-hidden="true" loading="lazy">
     <p class="eyebrow">Sobre</p>
     <h2 class="sobre-title reveal" id="sobre-title">Olá, sou <em>Diovana Carvalho</em></h2>
@@ -786,7 +782,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 </section>
 
 <!-- ============ 5. VOCÊ SE IDENTIFICA? ============ -->
-<section class="bg-white" id="identifica" aria-labelledby="ident-title">
+<section class="bg-cream" id="identifica" aria-labelledby="ident-title">
   <div class="wrap ident">
     <div>
       <p class="eyebrow">Você se identifica?</p>
