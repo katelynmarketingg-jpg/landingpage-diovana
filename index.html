@@ -555,6 +555,19 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 .manifesto .text{max-width:44rem}
 .manifesto .text p{font-size:clamp(1.0625rem,1.6vw,1.25rem);line-height:1.75;color:var(--black)}
 .manifesto .text p+p{margin-top:1.2rem}
+
+/* encerramento em tela cheia */
+.closing{min-height:100svh;display:flex;align-items:center}
+.closing .wrap{width:100%;padding-top:7rem;padding-bottom:4rem}
+.closing .photo img{object-position:50% 25%}
+/* rodapé compacto */
+.footer{padding-top:2.2rem;padding-bottom:5.5rem;font-size:.85rem}
+.footer-grid{gap:1.5rem;align-items:start}
+.footer img[src*="logo-completo"]{width:120px;height:auto;margin-bottom:.8rem!important}
+.footer p{margin:0 0 .35rem}
+.footer .eyebrow{font-size:.6rem;margin-bottom:.5rem}
+.footer .legal{margin-top:1.5rem;padding-top:1rem;font-size:.72rem}
+@media (min-width:860px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr}.footer{padding-bottom:2rem}}
 </style>
 </head>
 <body class="no-js">
@@ -821,7 +834,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
     <img src="img/encerramento.jpg" alt="" loading="lazy" onerror="this.remove()">
   </figure>
   <div class="wrap"><div class="closing-panel">
-    <h2 class="display h-xl reveal" id="closing-title">Seu direito <em>merece cuidado</em></h2>
+    <h2 class="display h-xl reveal" id="closing-title">Seu direito<br><em>merece cuidado</em></h2>
     <p class="lead reveal">Quanto antes você entende a sua situação, mais caminhos ficam abertos. Conte o seu caso para a Dra. Diovana.</p>
     <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Falar com a Dra. Diovana</a>
   </div></div>
