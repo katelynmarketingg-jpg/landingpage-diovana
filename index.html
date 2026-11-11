@@ -571,6 +571,13 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 .area-tag{display:block;font-family:var(--label);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-top:.35rem}
 .sit .photo::after{display:none}
 .sit .photo img{object-position:50% 40%}
+
+/* encerramento: sombra bege de baixo para cima, texto na parte de baixo */
+.closing::after,.closing::before{display:none}
+.closing .photo::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.92) 28%,rgba(240,225,206,.55) 46%,rgba(240,225,206,0) 64%)}
+.closing{align-items:flex-end}
+.closing .wrap{padding-bottom:clamp(3rem,7vw,5rem)}
+@media (min-width:960px){.closing .photo img{object-position:60% 12%}.closing .photo::before{background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.95) 22%,rgba(240,225,206,.6) 40%,rgba(240,225,206,0) 56%)}.closing .wrap{padding-bottom:3.5rem}}
 </style>
 </head>
 <body class="no-js">
