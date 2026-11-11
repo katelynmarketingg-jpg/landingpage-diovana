@@ -580,6 +580,13 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 @media (min-width:960px){.closing .photo img{object-position:60% 12%}.closing .photo::before{background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.95) 22%,rgba(240,225,206,.6) 40%,rgba(240,225,206,0) 56%)}.closing .wrap{padding-bottom:3.5rem}}
 .footer{background:var(--cream)!important;border-top:0!important;padding-top:1rem}
 .footer .legal{border-color:rgba(110,28,38,.18)}
+
+/* encerramento: texto direto na foto; sombra só na base, para emendar no rodapé */
+.closing{align-items:center}
+.closing .wrap{padding-bottom:6rem}
+.closing .photo::before,.closing .photo::before{background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.7) 7%,rgba(240,225,206,0) 16%)!important}
+.closing .lead{color:var(--black)!important}
+@media (max-width:959px){.closing{align-items:flex-end}.closing .photo::before{background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.85) 30%,rgba(240,225,206,0) 50%)!important}}
 </style>
 </head>
 <body class="no-js">
