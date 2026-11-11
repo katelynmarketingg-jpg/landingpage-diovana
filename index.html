@@ -496,6 +496,24 @@ body{color:var(--black)}
 .sobre-title em{font-style:italic;color:var(--accent);display:block}
 .marquee span{color:#FFF8F0;font-weight:600}
 .atuacao-col li::before,.service .checks li::before{font-size:1rem;top:.55rem}
+
+/* lista de atuação: clicável e com rolagem interna */
+.atuacao-list{max-height:430px;overflow-y:auto;overscroll-behavior:contain;padding-right:.6rem;scrollbar-width:thin;scrollbar-color:var(--accent) transparent;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,#000 0%,#000 82%,transparent 100%)}
+.atuacao-list::-webkit-scrollbar{width:3px}.atuacao-list::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+.atuacao-list li{padding:0!important}
+.atuacao-list li::before{display:none}
+.atuacao-list a{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem .2rem .8rem 1.4rem;text-decoration:none;position:relative;transition:color .25s,padding .25s}
+.atuacao-list a::before{content:"";position:absolute;left:.15rem;top:50%;width:6px;height:6px;border-radius:50%;background:var(--accent);transform:translateY(-50%)}
+.atuacao-list a span{color:var(--accent);opacity:0;transform:translateX(-6px);transition:opacity .25s,transform .25s}
+.atuacao-list a:hover{color:var(--accent);padding-left:1.7rem}
+.atuacao-list a:hover span{opacity:1;transform:none}
+.atuacao-list li{opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+.atuacao-list li.on{opacity:1;transform:none}
+.atuacao-hint{font-family:var(--label);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted-dark);margin-top:.8rem}
+@media (prefers-reduced-motion:reduce){.atuacao-list li{opacity:1;transform:none}}
+.sit.bg-cream .photo{background:linear-gradient(160deg,#FBF7F2 0%,#F3EAE0 100%)}
+.sit--own .photo{background:none!important}
 </style>
 </head>
 <body class="no-js">
@@ -569,11 +587,13 @@ body{color:var(--black)}
     <div class="atuacao-grid">
       <div class="atuacao-col reveal">
         <h3>Previdenciário (INSS)</h3>
-        <ul><li>Salário-maternidade</li><li>BPC/LOAS</li><li>Auxílio-doença</li><li>Aposentadoria por invalidez</li><li>Auxílio-acidente</li><li>Aposentadoria por idade</li><li>Aposentadoria por tempo de contribuição</li><li>Aposentadoria rural e híbrida</li><li>Aposentadoria especial</li><li>Pensão por morte</li><li>Revisão de benefícios</li><li>Recurso de benefício negado</li><li>Planejamento de aposentadoria</li></ul>
+        <ul class="atuacao-list"><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre salário-maternidade." href="#contato" target="_blank" rel="noopener">Salário-maternidade<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre BPC/LOAS." href="#contato" target="_blank" rel="noopener">BPC/LOAS<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre auxílio-doença." href="#contato" target="_blank" rel="noopener">Auxílio-doença<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre auxílio-doença rural." href="#contato" target="_blank" rel="noopener">Auxílio-doença rural<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre aposentadoria por invalidez." href="#contato" target="_blank" rel="noopener">Aposentadoria por invalidez<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre auxílio-acidente." href="#contato" target="_blank" rel="noopener">Auxílio-acidente<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre aposentadoria por idade." href="#contato" target="_blank" rel="noopener">Aposentadoria por idade<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre aposentadoria por tempo de contribuição." href="#contato" target="_blank" rel="noopener">Aposentadoria por tempo de contribuição<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre aposentadoria rural e híbrida." href="#contato" target="_blank" rel="noopener">Aposentadoria rural e híbrida<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre aposentadoria especial." href="#contato" target="_blank" rel="noopener">Aposentadoria especial<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre aposentadoria da pessoa com deficiência." href="#contato" target="_blank" rel="noopener">Aposentadoria da pessoa com deficiência<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre pensão por morte." href="#contato" target="_blank" rel="noopener">Pensão por morte<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre auxílio-reclusão." href="#contato" target="_blank" rel="noopener">Auxílio-reclusão<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre revisão de benefícios." href="#contato" target="_blank" rel="noopener">Revisão de benefícios<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre recurso de benefício negado." href="#contato" target="_blank" rel="noopener">Recurso de benefício negado<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre planejamento de aposentadoria." href="#contato" target="_blank" rel="noopener">Planejamento de aposentadoria<span aria-hidden="true">→</span></a></li></ul>
+        <p class="atuacao-hint">Role a lista · toque para conversar</p>
       </div>
       <div class="atuacao-col reveal">
         <h3>Trabalhista</h3>
-        <ul><li>Revisão de cálculos da rescisão</li><li>Verbas rescisórias</li><li>Horas extras</li><li>Rescisão indireta</li><li>FGTS não depositado</li><li>Insalubridade e periculosidade</li><li>Trabalho sem carteira assinada</li><li>Desvio e acúmulo de função</li><li>Estabilidade da gestante</li><li>Acidente e doença do trabalho</li><li>Assédio moral</li></ul>
+        <ul class="atuacao-list"><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre revisão de cálculos da rescisão." href="#contato" target="_blank" rel="noopener">Revisão de cálculos da rescisão<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre verbas rescisórias." href="#contato" target="_blank" rel="noopener">Verbas rescisórias<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre horas extras." href="#contato" target="_blank" rel="noopener">Horas extras<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre rescisão indireta." href="#contato" target="_blank" rel="noopener">Rescisão indireta<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre FGTS não depositado." href="#contato" target="_blank" rel="noopener">FGTS não depositado<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre reversão de justa causa." href="#contato" target="_blank" rel="noopener">Reversão de justa causa<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre insalubridade e periculosidade." href="#contato" target="_blank" rel="noopener">Insalubridade e periculosidade<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre adicional noturno." href="#contato" target="_blank" rel="noopener">Adicional noturno<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre intervalo de almoço não concedido." href="#contato" target="_blank" rel="noopener">Intervalo de almoço não concedido<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre trabalho sem carteira assinada." href="#contato" target="_blank" rel="noopener">Trabalho sem carteira assinada<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre desvio e acúmulo de função." href="#contato" target="_blank" rel="noopener">Desvio e acúmulo de função<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre equiparação salarial." href="#contato" target="_blank" rel="noopener">Equiparação salarial<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre estabilidade da gestante." href="#contato" target="_blank" rel="noopener">Estabilidade da gestante<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre acidente e doença do trabalho." href="#contato" target="_blank" rel="noopener">Acidente e doença do trabalho<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre burnout e doenças ocupacionais." href="#contato" target="_blank" rel="noopener">Burnout e doenças ocupacionais<span aria-hidden="true">→</span></a></li><li><a data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de uma orientação sobre assédio moral." href="#contato" target="_blank" rel="noopener">Assédio moral<span aria-hidden="true">→</span></a></li></ul>
+        <p class="atuacao-hint">Role a lista · toque para conversar</p>
       </div>
     </div>
   </div>
@@ -581,7 +601,7 @@ body{color:var(--black)}
 
 <!-- ============ 6. SITUAÇÕES (tela cheia, foto e texto alternados) ============ -->
 <div id="areas">
-<section class="sit bg-white photo-left" id="maternidade" aria-labelledby="t-maternidade">
+<section class="sit bg-cream photo-left" id="maternidade" aria-labelledby="t-maternidade">
     <figure class="photo" data-label="Imagem: gestante"><img src="img/sit-maternidade.jpg" alt="Gestante com as mãos na barriga" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Salário-maternidade</p>
@@ -592,7 +612,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-cream photo-right" id="bpc" aria-labelledby="t-bpc">
+<section class="sit bg-white photo-right" id="bpc" aria-labelledby="t-bpc">
     <figure class="photo" data-label="Imagem: criança ou idoso com a família"><img src="img/sit-bpc.jpg" alt="Criança acompanhada da família" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">BPC/LOAS</p>
@@ -603,7 +623,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-white photo-left" id="rescisao" aria-labelledby="t-rescisao">
+<section class="sit bg-cream photo-left" id="rescisao" aria-labelledby="t-rescisao">
     <figure class="photo" data-label="Imagem: trabalhador com documentos da rescisão"><img src="img/sit-rescisao.jpg" alt="Trabalhador conferindo o termo de rescisão" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão</p>
@@ -614,7 +634,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-cream photo-right" id="rescisao-indireta" aria-labelledby="t-rescisao-indireta">
+<section class="sit bg-white photo-right" id="rescisao-indireta" aria-labelledby="t-rescisao-indireta">
     <figure class="photo" data-label="Imagem: trabalhador conferindo o extrato do FGTS"><img src="img/sit-rescisao-indireta.jpg" alt="Trabalhador conferindo o extrato do FGTS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão indireta</p>
@@ -625,7 +645,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-white photo-left" id="negado" aria-labelledby="t-negado">
+<section class="sit bg-cream photo-left" id="negado" aria-labelledby="t-negado">
     <figure class="photo" data-label="Imagem: pessoa lendo carta do INSS"><img src="img/sit-negado.jpg" alt="Pessoa lendo uma carta do INSS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Benefício negado</p>
@@ -635,7 +655,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-cream photo-right" id="auxilio-doenca" aria-labelledby="t-auxilio-doenca">
+<section class="sit bg-white photo-right" id="auxilio-doenca" aria-labelledby="t-auxilio-doenca">
     <figure class="photo" data-label="Imagem: pessoa em recuperação, em casa"><img src="img/sit-auxilio-doenca.jpg" alt="Pessoa em recuperação, em casa" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Auxílio-doença</p>
@@ -645,7 +665,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-white photo-left" id="auxilio-acidente" aria-labelledby="t-auxilio-acidente">
+<section class="sit bg-cream photo-left" id="auxilio-acidente" aria-labelledby="t-auxilio-acidente">
     <figure class="photo" data-label="Imagem: trabalhador com sequela de acidente"><img src="img/sit-auxilio-acidente.jpg" alt="Trabalhador com o braço imobilizado" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Auxílio-acidente</p>
@@ -656,7 +676,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-cream photo-right" id="auxilio-rural" aria-labelledby="t-auxilio-rural">
+<section class="sit bg-white photo-right" id="auxilio-rural" aria-labelledby="t-auxilio-rural">
     <figure class="photo" data-label="Imagem: agricultor no campo"><img src="img/sit-auxilio-rural.jpg" alt="Agricultor no campo" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Trabalhador rural</p>
@@ -666,7 +686,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-white photo-left" id="aposentadoria-rural" aria-labelledby="t-aposentadoria-rural">
+<section class="sit bg-cream photo-left" id="aposentadoria-rural" aria-labelledby="t-aposentadoria-rural">
     <figure class="photo" data-label="Imagem: trabalhador rural no campo"><img src="img/sit-rural.jpg" alt="Trabalhador rural no campo" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Aposentadoria rural</p>
@@ -677,7 +697,7 @@ body{color:var(--black)}
     </div>
   </section>
 
-<section class="sit bg-cream photo-right sit--own" id="orientacao" aria-labelledby="t-orientacao">
+<section class="sit bg-white photo-right sit--own" id="orientacao" aria-labelledby="t-orientacao">
     <figure class="photo" data-label="Foto: Diovana"><img src="img/sobre-diovana.jpg" alt="Diovana Carvalho com livros de Direito Previdenciário e do Trabalho" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Por que buscar orientação</p>
@@ -871,6 +891,14 @@ if (reduce || !("IntersectionObserver" in window)) {
   }, {threshold:.15, rootMargin:"0px 0px -40px 0px"});
   reveals.forEach(el => io.observe(el));
 }
+
+/* itens das listas de atuação aparecem conforme rolam */
+document.querySelectorAll(".atuacao-list").forEach(list=>{
+  const items=list.querySelectorAll("li");
+  if(!("IntersectionObserver" in window)){items.forEach(i=>i.classList.add("on"));return;}
+  const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("on");o.unobserve(e.target);}}),{root:list,threshold:.3});
+  items.forEach(i=>o.observe(i));
+});
 </script>
 </body>
 </html>
