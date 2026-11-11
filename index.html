@@ -545,6 +545,13 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 .manifesto-destaque{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.2;color:var(--black);margin:2.2rem 0 1rem!important}
 .manifesto-destaque em{color:var(--accent)}
 .manifesto .pillars,.manifesto .pillar{border-color:var(--line-light)}
+
+/* topo: texto um pouco mais à esquerda e foto mais à direita, para afastar da cadeira */
+@media (min-width:960px){
+  .hero{padding-left:max(var(--pad),calc(var(--edge) - 4.5vw))}
+  .hero-frase{font-size:clamp(2.6rem,3.3vw,4.2rem)}
+  .hero .photo img,.hero picture img{object-position:92% 30%}
+}
 </style>
 </head>
 <body class="no-js">
