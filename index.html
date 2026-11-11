@@ -463,6 +463,20 @@ body{color:var(--black)}
 .hero .hero-title--frase{letter-spacing:0;line-height:1.12;font-size:clamp(2rem,8vw,2.6rem)}
 .hero .hero-title--frase em{display:block;margin-top:.35em}
 @media (min-width:960px){.hero .hero-title--frase{white-space:normal;max-width:12.5em;text-wrap:balance;font-size:clamp(2.4rem,3.2vw,3.6rem)}}
+
+/* ===== Frase do topo: composição editorial ===== */
+.hero-frase{font-family:var(--serif);font-weight:400;color:var(--black);font-size:clamp(2.2rem,9.5vw,2.9rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1.4rem}
+.hero-frase span{display:inline}
+.hero-frase{text-wrap:balance}
+@media (min-width:960px){.hero-frase span{display:block}}
+.hero-frase em{font-style:italic;color:var(--accent)}
+.hero-frase-2{font-family:var(--serif);font-size:clamp(1.25rem,4.6vw,1.5rem);color:var(--accent);margin:0 0 1.6rem;padding-top:1.3rem;position:relative}
+.hero-frase-2::before{content:"";position:absolute;top:0;left:0;width:56px;height:1px;background:var(--accent)}
+.hero .lead{font-size:1rem;letter-spacing:.01em}
+@media (min-width:960px){
+  .hero-frase{font-size:clamp(2.8rem,3.7vw,4.6rem);white-space:nowrap}
+  .hero-frase-2{font-size:clamp(1.4rem,1.7vw,1.9rem)}
+}
 </style>
 </head>
 <body class="no-js">
@@ -505,8 +519,9 @@ body{color:var(--black)}
     <picture><source media="(min-width:960px)" srcset="img/hero-wide.jpg"><img src="img/hero.jpg" alt="Diovana Carvalho, advogada em Santo Antônio da Patrulha, sentada e sorrindo" fetchpriority="high" onerror="this.remove()"></picture>
   </figure>
   <div class="hero-inner">
-    <h1 class="eyebrow" id="hero-title">Advocacia Previdenciária e Trabalhista · Santo Antônio da Patrulha/RS</h1>
-    <p class="display h-xl reveal hero-title hero-title--frase">Seus direitos fazem parte da sua história.<br><em>Protegê-los faz parte do nosso trabalho.</em></p>
+    <h1 class="eyebrow" id="hero-title">Advocacia Previdenciária e Trabalhista<span class="sr-only"> em Santo Antônio da Patrulha/RS</span></h1>
+    <p class="hero-frase reveal"><span>Seus direitos fazem parte</span> <span>da sua <em>história.</em></span></p>
+    <p class="hero-frase-2 reveal"><em>Protegê-los faz parte do nosso trabalho.</em></p>
     <p class="lead reveal">Atuação jurídica em questões previdenciárias e trabalhistas.</p>
     <div class="hero-ctas reveal">
       <a class="btn" data-wa="Olá, Diovana! Gostaria de pedir uma análise do meu caso." href="#contato" target="_blank" rel="noopener">Quero uma análise do meu caso</a>
