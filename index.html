@@ -216,7 +216,7 @@ section{position:relative}
 .service p{max-width:38ch}
 .service .checks{margin:1.6rem 0 2.2rem;border-top:1px solid var(--line-dark)}
 .service .checks li{padding:.85rem 0 .85rem 1.8rem;border-bottom:1px solid var(--line-dark);position:relative}
-.service .checks li::before{content:"✦";position:absolute;left:0;top:.95rem;font-size:.7rem;opacity:.75}
+.service .checks li::before{content:"•";position:absolute;left:0;top:.95rem;font-size:.7rem;opacity:.75}
 .service .note{font-size:.95rem;opacity:.85;margin-top:-.6rem;margin-bottom:2rem}
 .service .small{font-family:var(--label);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.4rem;opacity:.9}
 .service.bg-paper .checks{border-color:var(--line-light)}
@@ -456,7 +456,7 @@ body{color:var(--black)}
 .atuacao-grid{display:grid;gap:2.5rem;margin-bottom:3rem}
 .atuacao-col h3{font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 1rem;padding-bottom:1rem;border-bottom:1px solid var(--accent)}
 .atuacao-col li{padding:.7rem 0 .7rem 1.4rem;border-bottom:1px solid var(--line-light);position:relative}
-.atuacao-col li::before{content:"✦";position:absolute;left:0;top:.85rem;font-size:.6rem;color:var(--accent)}
+.atuacao-col li::before{content:"•";position:absolute;left:0;top:.85rem;font-size:.6rem;color:var(--accent)}
 @media (min-width:960px){.atuacao-grid{grid-template-columns:repeat(2,1fr);gap:5rem}}
 
 .hero .hero-title--frase,.hero .hero-title--frase em{text-transform:none}
@@ -494,6 +494,8 @@ body{color:var(--black)}
 }
 .sobre-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.2rem,4.4vw,3.4rem);line-height:1.1;margin:0 0 1.6rem;color:var(--black)}
 .sobre-title em{font-style:italic;color:var(--accent);display:block}
+.marquee span{color:#FFF8F0;font-weight:600}
+.atuacao-col li::before,.service .checks li::before{font-size:1rem;top:.55rem}
 </style>
 </head>
 <body class="no-js">
@@ -548,10 +550,10 @@ body{color:var(--black)}
 <!-- ============ 3. MARQUEE ============ -->
 <div class="marquee" role="region" aria-label="Áreas de atuação">
   <div class="marquee-track">
-    <span>DIREITO PREVIDENCIÁRIO ✦ DIREITO TRABALHISTA ✦ ATENDIMENTO PRESENCIAL E ONLINE ✦&nbsp;</span>
-    <span aria-hidden="true">DIREITO PREVIDENCIÁRIO ✦ DIREITO TRABALHISTA ✦ ATENDIMENTO PRESENCIAL E ONLINE ✦&nbsp;</span>
-    <span aria-hidden="true">DIREITO PREVIDENCIÁRIO ✦ DIREITO TRABALHISTA ✦ ATENDIMENTO PRESENCIAL E ONLINE ✦&nbsp;</span>
-    <span aria-hidden="true">DIREITO PREVIDENCIÁRIO ✦ DIREITO TRABALHISTA ✦ ATENDIMENTO PRESENCIAL E ONLINE ✦&nbsp;</span>
+    <span>DIREITO PREVIDENCIÁRIO  •  DIREITO TRABALHISTA  •  ATENDIMENTO PRESENCIAL E ONLINE •&nbsp;&nbsp;</span>
+    <span aria-hidden="true">DIREITO PREVIDENCIÁRIO  •  DIREITO TRABALHISTA  •  ATENDIMENTO PRESENCIAL E ONLINE •&nbsp;&nbsp;</span>
+    <span aria-hidden="true">DIREITO PREVIDENCIÁRIO  •  DIREITO TRABALHISTA  •  ATENDIMENTO PRESENCIAL E ONLINE •&nbsp;&nbsp;</span>
+    <span aria-hidden="true">DIREITO PREVIDENCIÁRIO  •  DIREITO TRABALHISTA  •  ATENDIMENTO PRESENCIAL E ONLINE •&nbsp;&nbsp;</span>
   </div>
 </div>
 
