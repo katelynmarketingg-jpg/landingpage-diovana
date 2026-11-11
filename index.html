@@ -458,6 +458,11 @@ body{color:var(--black)}
 .atuacao-col li{padding:.7rem 0 .7rem 1.4rem;border-bottom:1px solid var(--line-light);position:relative}
 .atuacao-col li::before{content:"✦";position:absolute;left:0;top:.85rem;font-size:.6rem;color:var(--accent)}
 @media (min-width:960px){.atuacao-grid{grid-template-columns:repeat(2,1fr);gap:5rem}}
+
+.hero .hero-title--frase,.hero .hero-title--frase em{text-transform:none}
+.hero .hero-title--frase{letter-spacing:0;line-height:1.12;font-size:clamp(2rem,8vw,2.6rem)}
+.hero .hero-title--frase em{display:block;margin-top:.35em}
+@media (min-width:960px){.hero .hero-title--frase{white-space:normal;max-width:12.5em;text-wrap:balance;font-size:clamp(2.4rem,3.2vw,3.6rem)}}
 </style>
 </head>
 <body class="no-js">
@@ -501,8 +506,8 @@ body{color:var(--black)}
   </figure>
   <div class="hero-inner">
     <h1 class="eyebrow" id="hero-title">Advocacia Previdenciária e Trabalhista · Santo Antônio da Patrulha/RS</h1>
-    <p class="display h-xl reveal hero-title">Seu direito,<br><em>sem</em> complicação</p>
-    <p class="lead reveal">Benefícios do INSS e direitos do trabalhador, explicados com calma e em palavras simples. No escritório ou online, de onde você estiver.</p>
+    <p class="display h-xl reveal hero-title hero-title--frase">Seus direitos fazem parte da sua história.<br><em>Protegê-los faz parte do nosso trabalho.</em></p>
+    <p class="lead reveal">Atuação jurídica em questões previdenciárias e trabalhistas.</p>
     <div class="hero-ctas reveal">
       <a class="btn" data-wa="Olá, Diovana! Gostaria de pedir uma análise do meu caso." href="#contato" target="_blank" rel="noopener">Quero uma análise do meu caso</a>
       <a class="link" href="#identifica">Ver como posso ajudar →</a>
