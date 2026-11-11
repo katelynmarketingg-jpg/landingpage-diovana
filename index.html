@@ -477,6 +477,22 @@ body{color:var(--black)}
   .hero-frase{font-size:clamp(2.8rem,3.7vw,4.6rem);white-space:nowrap}
   .hero-frase-2{font-size:clamp(1.4rem,1.7vw,1.9rem)}
 }
+
+/* ===== v22 ===== */
+.sit-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,6.6vw,2.3rem);line-height:1.15;margin:0 0 1.3rem;max-width:22ch;text-wrap:balance;color:var(--black)}
+.sit-title em{font-style:italic;color:var(--accent)}
+@media (min-width:960px){.sit-title{font-size:clamp(2.1rem,2.6vw,2.9rem)}}
+.sit-text+.sit-text{margin-top:-.6rem}
+.sit--own .photo{background:none}
+.atuacao .wrap{display:grid;gap:2.5rem}
+.atuacao .atuacao-head{margin:0}
+.atuacao .atuacao-grid{margin:0}
+@media (min-width:1100px){
+  .atuacao .wrap{grid-template-columns:.8fr 2fr;column-gap:4.5rem;align-items:start}
+  .atuacao .atuacao-head{position:sticky;top:7rem}
+  .atuacao .atuacao-grid{grid-template-columns:1fr 1fr;gap:3rem}
+  .atuacao .wrap>.btn{grid-column:1;justify-self:start;margin-top:-1rem;white-space:nowrap}
+}
 </style>
 </head>
 <body class="no-js">
@@ -492,7 +508,7 @@ body{color:var(--black)}
     <a href="#atuacao">Áreas</a>
     <a href="#como-funciona">Como funciona</a>
     <a href="#sobre">Sobre</a>
-    <a href="#duvidas">Dúvidas</a>
+    
   </nav>
   <div class="header-right">
     <a class="btn" data-wa="Olá, Diovana! Vim pelo site e gostaria de uma orientação sobre o meu caso." href="#contato" target="_blank" rel="noopener">
@@ -508,7 +524,7 @@ body{color:var(--black)}
   <a href="#outras">Outras áreas</a>
   <a href="#como-funciona">Como funciona</a>
   <a href="#sobre">Sobre</a>
-  <a href="#duvidas">Dúvidas</a>
+  
 </div>
 
 <main id="conteudo">
@@ -522,10 +538,8 @@ body{color:var(--black)}
     <h1 class="eyebrow" id="hero-title">Advocacia Previdenciária e Trabalhista<span class="sr-only"> em Santo Antônio da Patrulha/RS</span></h1>
     <p class="hero-frase reveal"><span>Seus direitos fazem parte</span> <span>da sua <em>história.</em></span></p>
     <p class="hero-frase-2 reveal"><em>Protegê-los faz parte do nosso trabalho.</em></p>
-    <p class="lead reveal">Atuação jurídica em questões previdenciárias e trabalhistas.</p>
     <div class="hero-ctas reveal">
-      <a class="btn" data-wa="Olá, Diovana! Gostaria de pedir uma análise do meu caso." href="#contato" target="_blank" rel="noopener">Quero uma análise do meu caso</a>
-      <a class="link" href="#identifica">Ver como posso ajudar →</a>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Vim pelo site e gostaria de falar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Falar com a Dra. Diovana</a>
     </div>
   </div>
 </section>
@@ -562,113 +576,100 @@ body{color:var(--black)}
   </div>
 </section>
 
-<!-- ============ 5. VOCÊ SE IDENTIFICA? ============ -->
-<section class="bg-cream" id="identifica" aria-labelledby="ident-title">
-  <div class="wrap ident">
-    <div>
-      <p class="eyebrow">Você se identifica?</p>
-      <h2 class="display h-lg reveal" id="ident-title">Alguma dessas situações <em>é a sua?</em></h2>
-      <p class="muted reveal" style="max-width:38ch;margin-bottom:2.5rem">Toque na frase que mais se parece com o seu momento e veja o que pode ser feito.</p>
-      <ul class="num-list">
-        <li><a href="#maternidade"><span class="t">Estou grávida (ou tive bebê há pouco) e não sei se tenho direito ao salário-maternidade.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#bpc"><span class="t">Cuido de um idoso ou de uma pessoa com deficiência, e a renda da família é baixa.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#rescisao"><span class="t">Saí do emprego e não sei se recebi tudo certo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#rescisao-indireta"><span class="t">A empresa não deposita meu FGTS ou atrasa meu salário.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#negado"><span class="t">Meu pedido no INSS foi negado e eu não entendi o motivo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#auxilio-doenca"><span class="t">Estou doente e não consigo trabalhar.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-        <li><a href="#aposentadoria-rural"><span class="t">Trabalho na roça e quero saber da minha aposentadoria.</span><span class="arrow" aria-hidden="true">→</span></a></li>
-      </ul>
-    </div>
-    <figure class="photo reveal" data-label="Foto: detalhe editorial · mãos, documentos, tons quentes">
-      <img src="img/identifica.jpg" alt="Diovana Carvalho em pé, sorrindo, de camisa branca" loading="lazy" onerror="this.remove()">
-    </figure>
-  </div>
-</section>
-
 <!-- ============ 6. SITUAÇÕES (tela cheia, foto e texto alternados) ============ -->
 <div id="areas">
 <section class="sit bg-white photo-left" id="maternidade" aria-labelledby="t-maternidade">
     <figure class="photo" data-label="Imagem: gestante"><img src="img/sit-maternidade.jpg" alt="Gestante com as mãos na barriga" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Salário-maternidade</p>
-      <h2 class="display h-lg reveal" id="t-maternidade">Grávida? <em>Uma contribuição</em> pode bastar</h2>
-      <p class="sit-text reveal">Desde 2024, uma única contribuição ao INSS já pode dar direito ao salário-maternidade, mesmo para autônoma, MEI ou desempregada.</p>
-      <ul class="sit-list"><li>Carteira assinada ou doméstica</li><li>Autônoma, MEI ou dona de casa</li><li>Trabalhadora rural</li></ul>
-      <a class="btn" data-wa="Olá, Diovana! Estou grávida (ou tive bebê) e gostaria de verificar meu direito ao salário-maternidade." href="#contato" target="_blank" rel="noopener">Quero verificar meu direito</a>
+      <h2 class="sit-title reveal" id="t-maternidade">Grávida? Com <em>uma única contribuição</em> você pode ter direito ao salário-maternidade</h2>
+      <p class="sit-text reveal">Para ter direito ao salário-maternidade, basta uma contribuição ao INSS feita antes do parto. Não importa se você é CLT, MEI ou autônoma.</p>
+      <ul class="sit-list"><li>Com carteira assinada (CLT) ou empregada doméstica</li><li>MEI, autônoma ou quem paga o INSS por conta própria</li><li>Dona de casa que contribui como facultativa</li><li>Trabalhadora rural, comprovando o trabalho no campo</li></ul>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Estou grávida (ou tive bebê) e gostaria de verificar meu direito ao salário-maternidade." href="#contato" target="_blank" rel="noopener">Quero verificar meu direito</a>
     </div>
   </section>
 
 <section class="sit bg-cream photo-right" id="bpc" aria-labelledby="t-bpc">
-    <figure class="photo" data-label="Imagem: idoso ou pessoa com deficiência com a família"><img src="img/sit-bpc.jpg" alt="Pessoa idosa acompanhada da família" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: criança ou idoso com a família"><img src="img/sit-bpc.jpg" alt="Criança acompanhada da família" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">BPC/LOAS</p>
-      <h2 class="display h-lg reveal" id="t-bpc">Um salário mínimo, <em>sem nunca</em> ter contribuído</h2>
-      <p class="sit-text reveal">Benefício para idosos a partir de 65 anos e pessoas com deficiência de qualquer idade, de famílias com renda baixa.</p>
-      <a class="btn" data-wa="Olá, Diovana! Gostaria de saber se minha família pode ter direito ao BPC/LOAS." href="#contato" target="_blank" rel="noopener">Quero saber sobre o BPC</a>
+      <h2 class="sit-title reveal" id="t-bpc">Receber um salário mínimo <em>mesmo sem nunca</em> ter contribuído?</h2>
+      <p class="sit-text reveal">Isso é possível com o BPC/LOAS, benefício pago pelo INSS a famílias de baixa renda.</p>
+      <p class="sit-text reveal">Para idosos a partir de 65 anos e pessoas com deficiência de qualquer idade, inclusive crianças com autismo (TEA) e, em alguns casos, com TDAH.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Gostaria de saber se minha família pode ter direito ao BPC/LOAS." href="#contato" target="_blank" rel="noopener">Quero saber sobre o BPC</a>
     </div>
   </section>
 
 <section class="sit bg-white photo-left" id="rescisao" aria-labelledby="t-rescisao">
-    <figure class="photo" data-label="Imagem: trabalhador com documentos da rescisão"><img src="img/sit-rescisao.jpg" alt="Trabalhador conferindo documentos da rescisão" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: trabalhador com documentos da rescisão"><img src="img/sit-rescisao.jpg" alt="Trabalhador conferindo o termo de rescisão" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão</p>
-      <h2 class="display h-lg reveal" id="t-rescisao">Saiu do emprego? <em>Confira</em> o que é seu</h2>
-      <p class="sit-text reveal">Férias, 13º, aviso prévio, FGTS e multa de 40%. Eu confiro se veio tudo certo.</p>
-      <p class="sit-note">Prazo: até 2 anos depois de sair da empresa.</p>
-      <a class="btn" data-wa="Olá, Diovana! Saí do emprego e gostaria de conferir se minha rescisão está correta." href="#contato" target="_blank" rel="noopener">Quero conferir minha rescisão</a>
+      <h2 class="sit-title reveal" id="t-rescisao">Saiu do emprego e está em dúvida <em>se recebeu tudo</em> o que deveria?</h2>
+      <p class="sit-text reveal">Você pode estar deixando dinheiro na mesa.</p>
+      <p class="sit-text reveal">Com a análise do cálculo do termo de rescisão, você tem certeza dos valores que recebeu e de que está tudo correto.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Saí do emprego e gostaria de analisar o cálculo da minha rescisão." href="#contato" target="_blank" rel="noopener">Quero analisar minha rescisão</a>
     </div>
   </section>
 
 <section class="sit bg-cream photo-right" id="rescisao-indireta" aria-labelledby="t-rescisao-indireta">
-    <figure class="photo" data-label="Imagem: trabalhador preocupado / extrato do FGTS"><img src="img/sit-rescisao-indireta.jpg" alt="Trabalhador conferindo o extrato do FGTS" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: trabalhador conferindo o extrato do FGTS"><img src="img/sit-rescisao-indireta.jpg" alt="Trabalhador conferindo o extrato do FGTS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão indireta</p>
-      <h2 class="display h-lg reveal" id="t-rescisao-indireta">A empresa <em>não deposita</em> seu FGTS?</h2>
-      <p class="sit-text reveal">Isso pode dar direito à rescisão indireta: você sai com os mesmos direitos de quem é demitido sem justa causa.</p>
-      <ul class="sit-list"><li>Saque do FGTS e multa de 40%</li><li>Aviso prévio</li><li>Seguro-desemprego</li></ul>
+      <h2 class="sit-title reveal" id="t-rescisao-indireta">A empresa <em>não deposita</em> o seu FGTS?</h2>
+      <p class="sit-text reveal">Você pode ter direito à rescisão indireta: se desligar da empresa com os mesmos direitos de quem é demitido sem justa causa.</p>
       <p class="sit-note">Antes de pedir demissão, busque orientação.</p>
-      <a class="btn" data-wa="Olá, Diovana! A empresa não está depositando meu FGTS (ou atrasa meu salário) e gostaria de saber sobre a rescisão indireta." href="#contato" target="_blank" rel="noopener">Quero saber se é o meu caso</a>
+      <a class="btn" data-wa="Olá, Dra. Diovana! A empresa não está depositando meu FGTS e gostaria de saber sobre a rescisão indireta." href="#contato" target="_blank" rel="noopener">Quero saber se é o meu caso</a>
     </div>
   </section>
 
 <section class="sit bg-white photo-left" id="negado" aria-labelledby="t-negado">
-    <figure class="photo" data-label="Imagem: carta do INSS / pessoa lendo documento"><img src="img/sit-negado.jpg" alt="Pessoa lendo uma carta do INSS" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: pessoa lendo carta do INSS"><img src="img/sit-negado.jpg" alt="Pessoa lendo uma carta do INSS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Benefício negado</p>
-      <h2 class="display h-lg reveal" id="t-negado">Um “não” do INSS <em>pode ser</em> revisto</h2>
-      <p class="sit-text reveal">Falta de documento, erro no cadastro, perícia apressada. Entendendo o motivo, dá para recorrer ou pedir de novo.</p>
-      <a class="btn" data-wa="Olá, Diovana! Meu benefício foi negado pelo INSS e gostaria de entender o que pode ser feito." href="#contato" target="_blank" rel="noopener">Quero entender a negativa</a>
+      <h2 class="sit-title reveal" id="t-negado">A negativa do INSS <em>não é o fim</em></h2>
+      <p class="sit-text reveal">Se o seu benefício foi negado, ainda é possível buscar o seu direito, com recurso no próprio INSS ou com uma ação na Justiça.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Meu benefício foi negado pelo INSS e gostaria de entender o que pode ser feito." href="#contato" target="_blank" rel="noopener">Quero entender meu caso</a>
     </div>
   </section>
 
 <section class="sit bg-cream photo-right" id="auxilio-doenca" aria-labelledby="t-auxilio-doenca">
-    <figure class="photo" data-label="Imagem: pessoa em recuperação / atestado médico"><img src="img/sit-auxilio-doenca.jpg" alt="Pessoa em recuperação, em casa" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: pessoa em recuperação, em casa"><img src="img/sit-auxilio-doenca.jpg" alt="Pessoa em recuperação, em casa" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Auxílio-doença</p>
-      <h2 class="display h-lg reveal" id="t-auxilio-doenca">Doente e sem poder trabalhar? <em>Veja se</em> tem direito</h2>
-      <p class="sit-text reveal">Para quem precisa se afastar por mais de 15 dias. Em regra, com 12 contribuições, e sem essa exigência em caso de acidente.</p>
-      <a class="btn" data-wa="Olá, Diovana! Estou com problemas de saúde e gostaria de entender meu direito ao auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero entender meu afastamento</a>
+      <h2 class="sit-title reveal" id="t-auxilio-doenca">Está doente e não pode trabalhar? <em>Você pode ter direito</em> ao auxílio-doença</h2>
+      <p class="sit-text reveal">Com a orientação de uma advogada previdenciária, você faz o pedido para ficar afastado e receber durante esse período.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Estou doente, não consigo trabalhar e gostaria de saber sobre o auxílio-doença." href="#contato" target="_blank" rel="noopener">Quero pedir meu afastamento</a>
     </div>
   </section>
 
-<section class="sit bg-white photo-left" id="aposentadoria-rural" aria-labelledby="t-aposentadoria-rural">
-    <figure class="photo" data-label="Imagem: trabalhador rural no campo"><img src="img/sit-rural.jpg" alt="Trabalhador rural no campo" loading="lazy" onerror="this.remove()"></figure>
+<section class="sit bg-white photo-left" id="auxilio-rural" aria-labelledby="t-auxilio-rural">
+    <figure class="photo" data-label="Imagem: agricultor no campo"><img src="img/sit-auxilio-rural.jpg" alt="Agricultor no campo" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Trabalhador rural</p>
-      <h2 class="display h-lg reveal" id="t-aposentadoria-rural">Trabalha na roça? <em>O INSS</em> também é seu</h2>
-      <p class="sit-text reveal">Auxílio-doença e aposentadoria sem precisar ter pago o INSS. O que vale é comprovar o trabalho no campo.</p>
-      <ul class="sit-list"><li>Aposentadoria: 55 anos (mulher) e 60 (homem)</li><li>15 anos de trabalho rural</li><li>Auxílio-doença: 12 meses de trabalho rural</li></ul>
-      <a class="btn" data-wa="Olá, Diovana! Trabalho (ou trabalhei) na roça e gostaria de saber sobre aposentadoria e auxílio rural." href="#contato" target="_blank" rel="noopener">Quero saber dos meus direitos</a>
+      <h2 class="sit-title reveal" id="t-auxilio-rural">Trabalha na roça e precisa se afastar? <em>Você também</em> pode ter direito ao auxílio-doença</h2>
+      <p class="sit-text reveal">Quem trabalha no campo pode receber o auxílio-doença mesmo sem pagar o INSS todo mês. O que conta é comprovar o trabalho rural.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Trabalho na roça, preciso me afastar e gostaria de saber sobre o auxílio-doença rural." href="#contato" target="_blank" rel="noopener">Quero orientação sobre auxílio rural</a>
     </div>
   </section>
 
-<section class="sit bg-cream photo-right" id="orientacao" aria-labelledby="t-orientacao">
-    <figure class="photo" data-label="Imagem: atendimento / conversa à mesa"><img src="img/sit-orientacao.jpg" alt="Conversa de orientação jurídica à mesa" loading="lazy" onerror="this.remove()"></figure>
+<section class="sit bg-cream photo-right" id="aposentadoria-rural" aria-labelledby="t-aposentadoria-rural">
+    <figure class="photo" data-label="Imagem: trabalhador rural no campo"><img src="img/sit-rural.jpg" alt="Trabalhador rural no campo" loading="lazy" onerror="this.remove()"></figure>
+    <div class="sit-body">
+      <p class="eyebrow">Aposentadoria rural</p>
+      <h2 class="sit-title reveal" id="t-aposentadoria-rural">Trabalha na roça e quer saber <em>quando pode</em> se aposentar?</h2>
+      <p class="sit-text reveal">A aposentadoria rural tem regras próprias, diferentes das de quem trabalha na cidade.</p>
+      <p class="sit-text reveal">Converse com uma advogada previdenciária e entenda o seu caso.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Trabalho (ou trabalhei) na roça e gostaria de saber quando posso me aposentar." href="#contato" target="_blank" rel="noopener">Quero saber da minha aposentadoria</a>
+    </div>
+  </section>
+
+<section class="sit bg-white photo-left sit--own" id="orientacao" aria-labelledby="t-orientacao">
+    <figure class="photo" data-label="Foto: Diovana"><img src="img/orientacao-diovana.jpg" alt="Diovana Carvalho sorrindo, sentada em um jardim" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Por que buscar orientação</p>
-      <h2 class="display h-lg reveal" id="t-orientacao">Fazer certo <em>da primeira vez</em> poupa tempo e dinheiro</h2>
-      <p class="sit-text reveal">Pedido com documento faltando é negado. Rescisão assinada sem conferir deixa valores para trás. Com orientação, você evita meses de espera.</p>
-      <a class="btn" data-wa="Olá, Diovana! Gostaria de uma orientação sobre o meu caso antes de dar qualquer passo." href="#contato" target="_blank" rel="noopener">Quero uma orientação</a>
+      <h2 class="sit-title reveal" id="t-orientacao">Fazer certo da primeira vez <em>poupa tempo e dinheiro</em></h2>
+      <p class="sit-text reveal">Encaminhar um benefício sozinho pode fazer você perder meses. Com uma advogada ao lado, o pedido já sai do jeito certo.</p>
+      <a class="btn" data-wa="Olá, Dra. Diovana! Gostaria de uma orientação sobre o meu caso antes de dar qualquer passo." href="#contato" target="_blank" rel="noopener">Falar com a Dra. Diovana</a>
     </div>
   </section>
 </div>
@@ -747,12 +748,9 @@ body{color:var(--black)}
 <!-- ============ 9. MANIFESTO ============ -->
 <section class="bg-white manifesto" aria-labelledby="manifesto-title">
   <div class="wrap">
-    <p class="eyebrow center" style="text-align:center">Manifesto</p>
     <h2 class="display h-lg center reveal" id="manifesto-title" style="text-align:center;max-width:14ch">Por que buscar <em>orientação?</em></h2>
     <div class="text center reveal" style="text-align:center">
-      <p>Ninguém procura uma advogada em um dia comum.</p>
-      <p>Às vezes é um bebê que chegou e um benefício que não veio. Uma demissão sem explicação. Um laudo que o INSS não aceitou.</p>
-      <p>Orientação jurídica serve para isso: transformar dúvida em informação e informação em uma decisão segura.</p>
+      <p>No meio de um momento difícil, ter ao lado alguém que realmente se importa com o seu caso faz toda a diferença.</p>
     </div>
     <div class="pillars">
       <div class="pillar reveal"><h3 style="margin-top:0">Atendimento individualizado</h3><p>Cada história é ouvida do começo. Sem resposta pronta.</p></div>
@@ -772,49 +770,35 @@ body{color:var(--black)}
     <p class="eyebrow">Sobre</p>
     <p class="quote reveal">Por trás de cada direito, existe uma história que merece ser ouvida.</p>
     <h2 class="display h-md" id="sobre-title" style="font-size:clamp(1.6rem,3.5vw,2.2rem);letter-spacing:.08em">Diovana Carvalho</h2>
-    <p>Sou advogada em Santo Antônio da Patrulha e atuo nas áreas previdenciária e trabalhista.</p>
+    <p>Prazer, sou Diovana Carvalho, advogada em Santo Antônio da Patrulha. Atuo nas áreas previdenciária e trabalhista.</p>
     <p>Escolhi trabalhar com pessoas que chegam em momentos delicados: uma gestação, uma demissão, uma doença, a perda de alguém. Por isso, meu atendimento começa pela escuta.</p>
     <p>Explico cada etapa com clareza, para que você tome decisões com segurança, seja no escritório ou online.</p>
-    <p>[FORMAÇÃO: ex. graduada em Direito pela ___; pós-graduação em ___ (só citar se houver certificado)]</p>
     <p class="signature" aria-hidden="true">Diovana Carvalho</p>
     <p class="oab">Advogada · OAB/RS [000.000]</p>
   </div>
 </section>
 
-<!-- ============ 10. FAQ ============ -->
-<section class="bg-white" id="duvidas" aria-labelledby="faq-title">
-  <div class="wrap faq-grid">
+<!-- ============ 5. VOCÊ SE IDENTIFICA? ============ -->
+<section class="bg-white" id="identifica" aria-labelledby="ident-title">
+  <div class="wrap ident">
     <div>
-      <p class="eyebrow">Dúvidas frequentes</p>
-      <h2 class="display h-lg reveal" id="faq-title">Antes de <em>conversar</em></h2>
-      <p class="muted" style="max-width:32ch">Não encontrou sua pergunta? Mande pelo WhatsApp.</p>
+      <p class="eyebrow">Você se identifica?</p>
+      <h2 class="display h-lg reveal" id="ident-title">Alguma dessas situações <em>é a sua?</em></h2>
+      <p class="muted reveal" style="max-width:38ch;margin-bottom:2.5rem">Toque na frase que mais se parece com o seu momento e veja o que pode ser feito.</p>
+      <ul class="num-list">
+        <li><a href="#maternidade"><span class="t">Estou grávida (ou tive bebê há pouco) e não sei se tenho direito ao salário-maternidade.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#bpc"><span class="t">Cuido de um idoso ou de uma pessoa com deficiência, e a renda da família é baixa.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#rescisao"><span class="t">Saí do emprego e não sei se recebi tudo certo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#rescisao-indireta"><span class="t">A empresa não deposita meu FGTS ou atrasa meu salário.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#negado"><span class="t">Meu pedido no INSS foi negado e eu não entendi o motivo.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#auxilio-doenca"><span class="t">Estou doente e não consigo trabalhar.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#auxilio-rural"><span class="t">Trabalho na roça e preciso me afastar por doença.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+        <li><a href="#aposentadoria-rural"><span class="t">Trabalho na roça e quero saber da minha aposentadoria.</span><span class="arrow" aria-hidden="true">→</span></a></li>
+      </ul>
     </div>
-    <div class="faq">
-      <details>
-        <summary>Preciso ir até o escritório?</summary>
-        <div class="a"><p>Não. O atendimento pode ser todo online, por WhatsApp ou chamada de vídeo. Se preferir conversar pessoalmente, o escritório fica em Santo Antônio da Patrulha.</p></div>
-      </details>
-      <details>
-        <summary>Quais documentos eu devo separar?</summary>
-        <div class="a"><p>Depende do caso, mas costumam ajudar: documento com foto, CPF, carteira de trabalho, laudos médicos e a carta do INSS, se houver.</p><p>Também é útil o CNIS, que é o extrato com todas as suas contribuições ao INSS. Ele pode ser baixado pelo aplicativo Meu INSS. Se não tiver tudo, tudo bem: a gente vê juntos.</p></div>
-      </details>
-      <details>
-        <summary>O INSS negou meu pedido. Ainda dá para fazer algo?</summary>
-        <div class="a"><p>Em muitos casos, sim. Dependendo do motivo, pode caber recurso, um novo pedido ou uma ação na Justiça. A análise da carta de indeferimento (o documento em que o INSS explica a negativa) mostra o caminho mais adequado.</p></div>
-      </details>
-      <details>
-        <summary>Fui demitido(a) há um tempo. Ainda posso buscar meus direitos?</summary>
-        <div class="a"><p>Em geral, o trabalhador tem até 2 anos após sair da empresa para entrar com uma ação, e pode cobrar valores dos últimos 5 anos de trabalho. Cada situação tem detalhes, por isso vale analisar com calma.</p></div>
-      </details>
-      <details>
-        <summary>Vocês atendem pessoas de outras cidades?</summary>
-        <div class="a"><p>Sim. Com o atendimento online, é possível acompanhar casos de outras cidades e estados.</p></div>
-      </details>
-      <details>
-        <summary>Como funciona o primeiro contato?</summary>
-        <div class="a"><p>Você manda uma mensagem pelo WhatsApp contando sua situação. A partir daí, combinamos a melhor forma de analisar o seu caso.</p></div>
-      </details>
-    </div>
+    <figure class="photo reveal" data-label="Foto: detalhe editorial · mãos, documentos, tons quentes">
+      <img src="img/identifica.jpg" alt="Diovana Carvalho em pé, sorrindo, de camisa branca" loading="lazy" onerror="this.remove()">
+    </figure>
   </div>
 </section>
 
@@ -825,9 +809,9 @@ body{color:var(--black)}
   </figure>
   <div class="wrap"><div class="closing-panel">
     <p class="eyebrow">Análise do seu caso</p>
-    <h2 class="display h-xl reveal" id="closing-title">O primeiro passo <em>é uma conversa</em></h2>
-    <p class="lead reveal">Conte o que está acontecendo. A partir daí, você vai entender quais são seus direitos e quais caminhos existem.</p>
-    <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Quero conversar sobre meu caso</a>
+    <h2 class="display h-xl reveal" id="closing-title">Seu direito <em>merece cuidado</em></h2>
+    <p class="lead reveal">Quanto antes você entende a sua situação, mais caminhos ficam abertos. Conte o seu caso para a Dra. Diovana.</p>
+    <a class="btn reveal" data-wa="Olá, Diovana! Gostaria de conversar sobre o meu caso." href="#contato" target="_blank" rel="noopener">Falar com a Dra. Diovana</a>
   </div></div>
 </section>
 
