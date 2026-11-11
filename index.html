@@ -569,6 +569,8 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 .footer .legal{margin-top:1.5rem;padding-top:1rem;font-size:.72rem}
 @media (min-width:860px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr}.footer{padding-bottom:2rem}}
 .area-tag{display:block;font-family:var(--label);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-top:.35rem}
+.sit .photo::after{display:none}
+.sit .photo img{object-position:50% 40%}
 </style>
 </head>
 <body class="no-js">
@@ -657,7 +659,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 <!-- ============ 6. SITUAÇÕES (tela cheia, foto e texto alternados) ============ -->
 <div id="areas">
 <section class="sit bg-cream photo-left" id="maternidade" aria-labelledby="t-maternidade">
-    <figure class="photo" data-label="Imagem: gestante"><img src="img/sit-maternidade.jpg" alt="Gestante com as mãos na barriga" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: gestante"><img src="img/sit-maternidade.jpg" alt="Gestante segurando uma flor junto à barriga" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Salário-maternidade</p>
       <h2 class="sit-title reveal" id="t-maternidade">Grávida? Com <em>uma única contribuição</em> você pode ter direito ao salário-maternidade</h2>
@@ -668,7 +670,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-white photo-right" id="bpc" aria-labelledby="t-bpc">
-    <figure class="photo" data-label="Imagem: criança ou idoso com a família"><img src="img/sit-bpc.jpg" alt="Criança acompanhada da família" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: criança ou idoso com a família"><img src="img/sit-bpc.jpg" alt="Senhora idosa sorrindo" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">BPC/LOAS</p>
       <h2 class="sit-title reveal" id="t-bpc">Receber um salário mínimo <em>mesmo sem nunca</em> ter contribuído?</h2>
@@ -679,7 +681,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-cream photo-left" id="rescisao" aria-labelledby="t-rescisao">
-    <figure class="photo" data-label="Imagem: trabalhador com documentos da rescisão"><img src="img/sit-rescisao.jpg" alt="Trabalhador conferindo o termo de rescisão" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: trabalhador com documentos da rescisão"><img src="img/sit-rescisao.jpg" alt="Mão segurando notas de dinheiro" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão</p>
       <h2 class="sit-title reveal" id="t-rescisao">Saiu do emprego e está em dúvida <em>se recebeu tudo</em> o que deveria?</h2>
@@ -690,7 +692,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-white photo-right" id="aposentadoria-rural" aria-labelledby="t-aposentadoria-rural">
-    <figure class="photo" data-label="Imagem: trabalhador rural no campo"><img src="img/sit-rural.jpg" alt="Trabalhador rural no campo" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: trabalhador rural no campo"><img src="img/sit-rural.jpg" alt="Agricultor caminhando em uma plantação de milho" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Aposentadoria rural</p>
       <h2 class="sit-title reveal" id="t-aposentadoria-rural">Trabalha na roça e quer saber <em>quando pode</em> se aposentar?</h2>
@@ -701,7 +703,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-cream photo-left" id="rescisao-indireta" aria-labelledby="t-rescisao-indireta">
-    <figure class="photo" data-label="Imagem: trabalhador conferindo o extrato do FGTS"><img src="img/sit-rescisao-indireta.jpg" alt="Trabalhador conferindo o extrato do FGTS" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: trabalhador conferindo o extrato do FGTS"><img src="img/sit-rescisao-indireta.jpg" alt="Celular com o aplicativo do FGTS aberto" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Rescisão indireta</p>
       <h2 class="sit-title reveal" id="t-rescisao-indireta">A empresa <em>não deposita</em> o seu FGTS?</h2>
@@ -712,7 +714,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-white photo-right" id="negado" aria-labelledby="t-negado">
-    <figure class="photo" data-label="Imagem: pessoa lendo carta do INSS"><img src="img/sit-negado.jpg" alt="Pessoa lendo uma carta do INSS" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: pessoa lendo carta do INSS"><img src="img/sit-negado.jpg" alt="Fachada de uma agência do INSS" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Benefício negado</p>
       <h2 class="sit-title reveal" id="t-negado">A negativa do INSS <em>não é o fim</em></h2>
@@ -722,7 +724,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-cream photo-left" id="auxilio-doenca" aria-labelledby="t-auxilio-doenca">
-    <figure class="photo" data-label="Imagem: pessoa em recuperação, em casa"><img src="img/sit-auxilio-doenca.jpg" alt="Pessoa em recuperação, em casa" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: pessoa em recuperação, em casa"><img src="img/sit-auxilio-doenca.jpg" alt="Rosto de uma pessoa idosa em close" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Auxílio-doença</p>
       <h2 class="sit-title reveal" id="t-auxilio-doenca">Está doente e não pode trabalhar? <em>Você pode ter direito</em> ao auxílio-doença</h2>
@@ -732,7 +734,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-white photo-right" id="auxilio-rural" aria-labelledby="t-auxilio-rural">
-    <figure class="photo" data-label="Imagem: agricultor no campo"><img src="img/sit-auxilio-rural.jpg" alt="Agricultor no campo" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: agricultor no campo"><img src="img/sit-auxilio-rural.jpg" alt="Mãos de agricultor colhendo verduras" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Trabalhador rural</p>
       <h2 class="sit-title reveal" id="t-auxilio-rural">Trabalha na roça e precisa se afastar? <em>Você também</em> pode ter direito ao auxílio-doença</h2>
@@ -742,7 +744,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   </section>
 
 <section class="sit bg-cream photo-left" id="auxilio-acidente" aria-labelledby="t-auxilio-acidente">
-    <figure class="photo" data-label="Imagem: trabalhador com sequela de acidente"><img src="img/sit-auxilio-acidente.jpg" alt="Trabalhador com o braço imobilizado" loading="lazy" onerror="this.remove()"></figure>
+    <figure class="photo" data-label="Imagem: trabalhador com sequela de acidente"><img src="img/sit-auxilio-acidente.jpg" alt="Trabalhador com capacete e colete de segurança" loading="lazy" onerror="this.remove()"></figure>
     <div class="sit-body">
       <p class="eyebrow">Auxílio-acidente</p>
       <h2 class="sit-title reveal" id="t-auxilio-acidente">Sofreu um acidente e ficou <em>com sequela?</em></h2>
