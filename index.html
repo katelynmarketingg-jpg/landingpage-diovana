@@ -40,6 +40,7 @@
     "postalCode": "95500-000",
     "addressCountry": "BR"
   },
+  "sameAs": ["https://instagram.com/diovanacarvalho.adv"],
   "areaServed": ["Santo Antônio da Patrulha", "Rio Grande do Sul", "Brasil"],
   "knowsAbout": ["Direito Previdenciário", "Direito do Trabalho", "Salário-maternidade", "BPC/LOAS", "Auxílio-doença"]
 }
@@ -62,9 +63,9 @@
   --cream:#F0E1CE;
   --paper:#F8F1E7;
   --wine:#583E2E;
-  --wine-2:#6E1C26;
-  --accent:#6E1C26;      /* bordô: detalhes sobre fundo claro (contraste 10:1 com o creme) */
-  --accent-light:#D08A92; /* bordô claro: detalhes sobre fundo escuro */
+  --wine-2:#6E5240;
+  --accent:#583E2E;      /* bordô: detalhes sobre fundo claro (contraste 10:1 com o creme) */
+  --accent-light:#C9AE96; /* bordô claro: detalhes sobre fundo escuro */
   --muted:#B8A491;      /* sobre marrom-escuro: contraste 7:1 (AA) */
   --muted-dark:#6A5543; /* sobre creme: contraste 5,5:1 (AA) */
   --line-dark:rgba(240,225,206,.18);
@@ -100,7 +101,7 @@ ul{margin:0;padding:0;list-style:none}
 
 /* ---------- Botões ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:var(--accent);color:var(--cream);font-family:var(--label);font-weight:600;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:1.15rem 1.9rem;border-radius:999px;border:1px solid var(--accent);transition:background .3s, border-color .3s, transform .3s;min-height:48px;text-align:center}
-.btn:hover{background:#8A2633;border-color:#8A2633;color:#fff}
+.btn:hover{background:#6E5240;border-color:#6E5240;color:#fff}
 .btn--light{background:var(--cream);color:var(--accent);border-color:var(--cream)}
 .btn--light:hover{background:#fff;border-color:#fff}
 .link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--label);font-weight:600;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:.6rem 0;border-bottom:1px solid currentColor;transition:gap .3s}
@@ -579,7 +580,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 .closing .wrap{padding-bottom:clamp(3rem,7vw,5rem)}
 @media (min-width:960px){.closing .photo img{object-position:60% 12%}.closing .photo::before{background:linear-gradient(0deg,var(--cream) 0%,rgba(240,225,206,.95) 22%,rgba(240,225,206,.6) 40%,rgba(240,225,206,0) 56%)}.closing .wrap{padding-bottom:3.5rem}}
 .footer{background:var(--cream)!important;border-top:0!important;padding-top:1rem}
-.footer .legal{border-color:rgba(110,28,38,.18)}
+.footer .legal{border-color:rgba(88,62,46,.18)}
 
 /* encerramento: texto direto na foto; sombra só na base, para emendar no rodapé */
 .closing{align-items:center}
@@ -600,8 +601,8 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
 <!-- ============ 1. HEADER ============ -->
 <header class="header" id="topo">
   <a href="#topo" class="logo" aria-label="Diovana Carvalho Advocacia — início">
-    <img class="logo-mark" src="img/logo-dc-bordo.png" alt="" width="57" height="40">
-    <img class="logo-name" src="img/logo-nome-bordo.png" alt="Diovana Carvalho Advocacia" width="183" height="12">
+    <img class="logo-mark" src="img/logo-dc-marrom.png" alt="" width="57" height="40">
+    <img class="logo-name" src="img/logo-nome-marrom.png" alt="Diovana Carvalho Advocacia" width="183" height="12">
   </a>
   <nav class="nav" aria-label="Principal">
     <a href="#atuacao">Áreas</a>
@@ -816,7 +817,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
     <img src="img/orientacao-diovana.jpg" alt="Diovana Carvalho sorrindo, sentada em um jardim" loading="lazy" onerror="this.remove()">
   </figure>
   <div class="body bg-white">
-    <img class="monogram" src="img/logo-dc-bordo.png" alt="" aria-hidden="true" loading="lazy">
+    <img class="monogram" src="img/logo-dc-marrom.png" alt="" aria-hidden="true" loading="lazy">
     <p class="eyebrow">Sobre</p>
     <h2 class="sobre-title reveal" id="sobre-title">Olá, sou <em>Diovana Carvalho</em></h2>
     <p>Sou advogada em Santo Antônio da Patrulha e atuo nas áreas previdenciária e trabalhista.</p>
@@ -872,7 +873,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
   <div class="footer-grid">
     <div>
       <h2 class="sr-only">Diovana Carvalho</h2>
-      <img src="img/logo-completo-bordo.png" alt="Diovana Carvalho — Advocacia Previdenciária e Trabalhista" width="240" height="162" loading="lazy" style="margin-bottom:1.4rem">
+      <img src="img/logo-completo-marrom.png" alt="Diovana Carvalho — Advocacia Previdenciária e Trabalhista" width="240" height="162" loading="lazy" style="margin-bottom:1.4rem">
       <p class="muted" style="margin-bottom:.4rem">Advogada · OAB/RS 119.055</p>
       <p class="muted">Direito Previdenciário e Trabalhista</p>
     </div>
@@ -883,7 +884,7 @@ body{--edge:max(var(--pad),calc((var(--vw,100vw) - var(--maxw)) / 2))}
     <div>
       <p class="eyebrow">Contato</p>
       <p><a data-wa="Olá, Diovana! Vim pelo site e gostaria de uma orientação." href="#contato" target="_blank" rel="noopener">WhatsApp (51) 99550-1094</a></p>
-      <p><a href="https://instagram.com/[USUARIO]" target="_blank" rel="noopener">Instagram @[USUARIO]</a></p>
+      <p><a href="https://instagram.com/diovanacarvalho.adv" target="_blank" rel="noopener">Instagram @diovanacarvalho.adv</a></p>
     </div>
   </div>
   <p class="legal">Santo Antônio da Patrulha/RS · Atendimento presencial e online.<br>Conteúdo de caráter informativo, em conformidade com o Provimento 205/2021 do Conselho Federal da OAB.</p>
